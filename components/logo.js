@@ -42,5 +42,5 @@ export function renderLogo({ withText = true, basePath = '' } = {}) {
  */
 export function renderLogoLink({ basePath = '' } = {}) {
   const href = basePath ? `${basePath}/` : '/';
-  return `<a class="logo" href="${href}" data-route="home" aria-label="Retour à l'accueil Rise Music Mag">${renderLogo({ withText: true, basePath })}</a>`;
+  return `<a class="logo" href="${href}" data-route="/" aria-label="Retour à l'accueil Rise Music Mag">${renderLogo({ withText: true, basePath })}</a>`;
 }
