@@ -1,0 +1,501 @@
+{
+  "artistes": [
+    {
+      "id": "sam-sauvage",
+      "nom": "Sam Sauvage",
+      "genre": "pop",
+      "statut": "publie",
+      "datePublication": "2026-01-30",
+      "ville": "Boulogne-sur-Mer",
+      "pays": "France",
+      "meta": "Boulogne-sur-Mer · album « Mesdames, Messieurs ! »",
+      "photo": null,
+      "photoAlt": "Portrait de Sam Sauvage",
+      "youtube": "4ycFfioIey4",
+      "description": "Sam Sauvage distille une pop élégante et décalée, costume sombre et chaussettes rouges, où la mélancolie n'exclut jamais l'ironie. Entre chanson française, new wave et électro, sa voix grave chante les noctambules et les danseurs solitaires avec un sens de la formule hérité de Bashung autant que de Bob Dylan.",
+      "parcours": "Né Hugo Brebion le 25 avril 2000 à Saint-Martin-Boulogne, il grandit à Condette et découvre la guitare en autodidacte après avoir vu un live de Bob Dylan sur YouTube. Après le groupe Photomaton puis le duo Mascaraa, il chante dans les rues et les bars de Lille avant de s'installer à Paris pour des études d'ingénieur du son. Son premier EP autoproduit « Prémices » sort en 2023 ; il signe ensuite chez Cinq7 (Wagram), multiplie les premières parties (Voyou, Arthur Teboul, Eddy de Pretto) et remporte la Victoire de la Musique de la Révélation masculine en 2026, l'année de son premier album « Mesdames, Messieurs ! ».",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/samsauvageoff/",
+        "tiktok": null,
+        "facebook": null,
+        "siteWeb": null
+      },
+      "albums": [
+        "sam-sauvage-mesdames-messieurs"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Sam Sauvage distills an elegant, offbeat pop — dark suit, red socks — where melancholy never rules out irony. Between French chanson, new wave and electro, his deep voice sings night owls and lone dancers with a way with words inherited as much from Bashung as from Bob Dylan.",
+      "parcours_en": "Born Hugo Brebion on April 25, 2000 in Saint-Martin-Boulogne, he grew up in Condette and taught himself guitar after watching a Bob Dylan live video on YouTube. After the band Photomaton and then the duo Mascaraa, he sang in the streets and bars of Lille before moving to Paris to study sound engineering. His self-produced first EP « Prémices » came out in 2023; he then signed with Cinq7 (Wagram), opened for several artists (Voyou, Arthur Teboul, Eddy de Pretto) and won the Victoire de la Musique for Male Discovery of the Year in 2026, the year of his first album « Mesdames, Messieurs ! »."
+    },
+    {
+      "id": "coline-rio",
+      "nom": "Coline Rio",
+      "genre": "pop",
+      "statut": "publie",
+      "datePublication": "2025-10-10",
+      "ville": "Nantes",
+      "pays": "France",
+      "meta": "Nantes · album « Maison »",
+      "photo": null,
+      "photoAlt": "Portrait de Coline Rio",
+      "youtube": "mqkQa481rc0",
+      "description": "Coline Rio écrit une chanson française électro-acoustique pétrie de folk et de douceur amère, où piano et arrangements feutrés portent des textes sur le refuge intérieur, la reconquête de soi et la transmission familiale.",
+      "parcours": "Née dans une famille de musiciens nantais (mère chanteuse, frère batteur), elle apprend le piano et le chant dès 6 ans avant d'intégrer le groupe Inüit en 2015. Après la séparation du groupe pendant la pandémie, elle se lance en solo : EP « Lourd et délicat » (2022), premier album « Ce qu'il restera de nous » (2023, studio de Stan Neff), puis l'EP collaboratif « Ce qui nous lie » avec Albin de la Simone et Voyou. Son second album « Maison », enregistré avec un orchestre à distance en Macédoine et incluant un duo avec Barbara Pravi, sort le 10 octobre 2025.",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/coline_rio/",
+        "tiktok": null,
+        "facebook": "https://www.facebook.com/ColineRio.page/",
+        "siteWeb": null
+      },
+      "albums": [
+        "coline-rio-maison"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Coline Rio writes electro-acoustic French chanson steeped in folk and bittersweet tenderness, where piano and hushed arrangements carry lyrics about inner refuge, reclaiming oneself, and family legacy.",
+      "parcours_en": "Born into a family of musicians in Nantes (a singer mother, a drummer brother), she learned piano and singing from age 6 before joining the band Inüit in 2015. After the group split during the pandemic, she went solo: the EP « Lourd et délicat » (2022), her first album « Ce qu'il restera de nous » (2023, recorded at Stan Neff's studio), then the collaborative EP « Ce qui nous lie » with Albin de la Simone and Voyou. Her second album « Maison », recorded remotely with an orchestra in Macedonia and featuring a duet with Barbara Pravi, was released on October 10, 2025."
+    },
+    {
+      "id": "asphalt",
+      "nom": "Asphalt",
+      "genre": "pop",
+      "statut": "publie",
+      "datePublication": "2025-03-28",
+      "ville": "Paris",
+      "pays": "France",
+      "meta": "Paris · EP « Cocktail Exil »",
+      "photo": null,
+      "photoAlt": "Portrait d'Asphalt",
+      "youtube": "7opdO-Vsbvs",
+      "description": "Asphalt façonne une pop mélancolique aux éclats rock, entre énergie garage et textes à fleur de peau, citant aussi bien Bashung que Gorillaz ou Ozzy Osbourne. Son single « Lame de fond » marque un virage plus dansant et plus coloré, assumant enfin la fête après des débuts plus sombres entre grunge et trap.",
+      "parcours": "Né Milo Thoretton le 31 décembre 1996 à Paris, il est le fils de l'actrice Chiara Mastroianni et le petit-fils de Catherine Deneuve — un héritage familial qu'il revendique sans s'y enfermer, après être passé par le mannequinat et le cinéma. Guidé par son ex-beau-père Benjamin Biolay, qui coécrit avec lui « Lame de fond » et d'autres titres, il sort son EP « Cocktail Exil » le 28 mars 2025, six titres entre rock garage, hyperpop et power pop.",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/aasspphhaalltt/",
+        "tiktok": null,
+        "facebook": null,
+        "siteWeb": null
+      },
+      "albums": [
+        "asphalt-cocktail-exil"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Asphalt shapes a melancholic pop streaked with rock, between garage energy and raw, exposed-nerve lyrics, citing influences from Bashung to Gorillaz and Ozzy Osbourne. His single « Lame de fond » marks a more danceable, more colourful turn, finally embracing the party after darker beginnings between grunge and trap.",
+      "parcours_en": "Born Milo Thoretton on December 31, 1996 in Paris, he is the son of actress Chiara Mastroianni and the grandson of Catherine Deneuve — a family legacy he claims without being confined by it, after stints in modelling and film. Guided by his former stepfather Benjamin Biolay, who co-writes « Lame de fond » and other tracks with him, he released his EP « Cocktail Exil » on March 28, 2025, six tracks spanning garage rock, hyperpop and power pop."
+    },
+    {
+      "id": "theodora",
+      "nom": "Theodora",
+      "genre": "afro",
+      "statut": "publie",
+      "datePublication": "2025-05-30",
+      "ville": "Saint-Denis",
+      "pays": "France",
+      "meta": "Saint-Denis · mixtape « Méga BBL »",
+      "photo": null,
+      "photoAlt": "Portrait de Theodora",
+      "youtube": "nNaVCjEJeEg",
+      "description": "Theodora ne reconnaît aucune frontière entre les genres : bouyon antillais, hyperpop, rap français, afrobeat, amapiano, calypso, dancehall et R&B se croisent dans son univers, porté par une hyperféminité décomplexée et des textes qui abordent sans détour la santé mentale, le harcèlement et l'identité de femme noire.",
+      "parcours": "Née Lily Theodora le 23 octobre 2003 à Lucerne, en Suisse, dans une famille de réfugiés politiques congolais, elle grandit au gré de nombreux déménagements entre la Grèce, le Congo, La Réunion puis plusieurs villes françaises avant de s'installer à Saint-Denis. Pendant le confinement de 2020, elle compose avec son frère aîné Jeez Suave, qui devient son producteur attitré. Après l'EP « Neptune » (2021) puis le diptyque « Lili aux paradis artificiels » (2023), elle explose en 2024 avec « Kongolese sous BBL », premier titre bouyon certifié single d'or en France par un artiste non antillais. Sa mixtape « Bad Boy Lovestory », rééditée sous le nom « Méga BBL » en mai 2025 avec des featurings de Jul, Juliette Armanet et Chilly Gonzales, lui vaut la Flamme de la révélation féminine de l'année, qu'elle dédie « à toutes les filles noires un peu bizarres ».",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/theodorabosslady/",
+        "tiktok": null,
+        "facebook": null,
+        "siteWeb": null
+      },
+      "albums": [
+        "theodora-m-ga-bbl"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Theodora recognizes no borders between genres: Caribbean bouyon, hyperpop, French rap, afrobeat, amapiano, calypso, dancehall and R&B all collide in her world, carried by an unapologetic hyper-femininity and lyrics that tackle mental health, harassment and Black womanhood head-on.",
+      "parcours_en": "Born Lily Theodora on October 23, 2003 in Lucerne, Switzerland, into a family of Congolese political refugees, she grew up moving frequently between Greece, Congo, Réunion Island and several French cities before settling in Saint-Denis. During the 2020 lockdown, she started writing with her older brother Jeez Suave, who became her regular producer. After the EP « Neptune » (2021) and the two-part « Lili aux paradis artificiels » (2023), she broke through in 2024 with « Kongolese sous BBL », the first bouyon track certified gold in France by a non-Caribbean artist. Her mixtape « Bad Boy Lovestory », reissued as « Méga BBL » in May 2025 with features from Jul, Juliette Armanet and Chilly Gonzales, earned her the Flamme for Female Breakthrough of the Year, which she dedicated “to all the slightly weird Black girls.”"
+    },
+    {
+      "id": "ronisia",
+      "nom": "Ronisia",
+      "genre": "afro",
+      "statut": "publie",
+      "datePublication": "2025-11-14",
+      "ville": "Grigny",
+      "pays": "France",
+      "meta": "Grigny · EP « OMW »",
+      "photo": null,
+      "photoAlt": "Portrait de Ronisia",
+      "youtube": "PXALYDUwNag",
+      "description": "Ronisia incarne une pop urbaine sensuelle et solaire, à la croisée du R&B et de l'afropop, où sa voix douce porte des histoires d'amour compliquées sur des productions chaloupées. Surnommée « Roni » par son entourage, elle rend régulièrement hommage à ses racines cap-verdiennes, notamment en créole portugais.",
+      "parcours": "Née Ronizia Mendes Borges le 13 novembre 1999 à Tarrafal, au Cap-Vert, elle s'installe avec sa famille à Grigny (Essonne) dès l'âge d'un an. Rien ne la destine à la musique : après le collège Pablo-Neruda, elle se forme à devenir éducatrice spécialisée et travaille en institut médico-éducatif, tout en chantant « dans la salle de bain », avant que son entourage ne la pousse vers le studio. Le single « Atterrissage » (2020), viral sur TikTok, la propulse chez Epic Records (Sony) ; son premier album éponyme (2022, plus de 90 000 ventes) et « Era 24 » (2023) confirment son ascension, couronnée par la Flamme de la révélation féminine 2023. En 2025, elle rejoint le casting de « Nouvelle École » sur Netflix aux côtés de Theodora et Aya Nakamura, et sort l'EP « OMW ».",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/ronisia_/",
+        "tiktok": null,
+        "facebook": "https://www.facebook.com/RonisiaOfficiel/",
+        "siteWeb": "https://ronisia.com/"
+      },
+      "albums": [
+        "ronisia-omw"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Ronisia embodies a sensual, sun-drenched urban pop at the crossroads of R&B and afropop, her soft voice carrying complicated love stories over swaying productions. Nicknamed “Roni” by those close to her, she regularly pays tribute to her Cape Verdean roots, notably by singing in Portuguese-based creole.",
+      "parcours_en": "Born Ronizia Mendes Borges on November 13, 1999 in Tarrafal, Cape Verde, she moved with her family to Grigny (Essonne) at just one year old. Nothing pointed her toward music: after Pablo-Neruda middle school, she trained as a special-needs educator and worked at a medical-educational institute, singing “in the bathroom” until those around her pushed her toward the studio. The single « Atterrissage » (2020), which went viral on TikTok, landed her a deal with Epic Records (Sony); her self-titled first album (2022, over 90,000 sales) and « Era 24 » (2023) confirmed her rise, crowned by the 2023 Flamme for Female Breakthrough. In 2025, she joined the cast of Netflix's “Nouvelle École” alongside Theodora and Aya Nakamura, and released the EP « OMW »."
+    },
+    {
+      "id": "okali",
+      "nom": "OKALI",
+      "genre": "afro",
+      "statut": "publie",
+      "datePublication": "2026-02-20",
+      "ville": "Courpignac",
+      "pays": "France",
+      "meta": "Courpignac · EP « Okali »",
+      "photo": null,
+      "photoAlt": "Portrait du duo OKALI",
+      "youtube": "4Oba0-Hf07M",
+      "description": "OKALI tisse une musique sans frontière où se croisent sonorités africaines, trip hop, dub et rock. Porté par la voix habitée de Gaëlle, qui chante en français, anglais, eton et zoulou, le duo construit un univers visuel et sonore total — costumes, clips, scénographie — pensé et conçu en autodidacte.",
+      "parcours": "Le duo est formé par Gaëlle Minali-Bella, née Nga Okali Gaëlle Perpétue, arrivée du Cameroun en France à 13 ans pour suivre un traitement contre le cancer qui lui coûte trois ans de chimiothérapie et l'amputation d'une jambe, et par Florent Sorin, ancien banquier puis paysagiste devenu musicien. Installés depuis plus de dix ans à Courpignac, en Charente-Maritime, ils créent OKALI en 2023 pendant un confinement, puisant leur nom dans un mot camerounais signifiant « faire attention à l'autre ». Révélés par The Voice en 2024, ils assurent en 2025 les premières parties de Lamomali, le collectif de Matthieu Chedid, avant de sortir leur premier EP éponyme le 20 février 2026.",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/okalimusic/",
+        "tiktok": null,
+        "facebook": "https://www.facebook.com/okalimusic/",
+        "siteWeb": null
+      },
+      "albums": [
+        "okali-okali"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "OKALI weaves borderless music where African sounds, trip hop, dub and rock all collide. Carried by Gaëlle's haunting voice, who sings in French, English, Eton and Zulu, the duo builds a total visual and sonic world — costumes, videos, staging — entirely self-taught.",
+      "parcours_en": "The duo was formed by Gaëlle Minali-Bella, born Nga Okali Gaëlle Perpétue, who arrived from Cameroon in France at age 13 for cancer treatment that cost her three years of chemotherapy and the amputation of a leg, and by Florent Sorin, a former banker and landscaper turned musician. Based for over ten years in Courpignac, in Charente-Maritime, they created OKALI in 2023 during a lockdown, drawing their name from a Cameroonian word meaning “to take care of others.” Discovered through The Voice in 2024, they opened in 2025 for Lamomali, Matthieu Chedid's collective, before releasing their self-titled first EP on February 20, 2026."
+    },
+    {
+      "id": "tdj",
+      "nom": "TDJ",
+      "genre": "dance",
+      "statut": "publie",
+      "datePublication": "2025-06-17",
+      "ville": "Montréal",
+      "pays": "Canada",
+      "meta": "Montréal · EP « TDJ123 »",
+      "photo": null,
+      "photoAlt": "Portrait de TDJ",
+      "youtube": "DcS37laAqzM",
+      "description": "TDJ ressuscite l'eurodance et la trance des années 90-2000 avec une ferveur intacte, mêlant nostalgie d'enfance et émotion brute, entre euphorie de rave et mélancolie emo. Une capsule temporelle assumée à 100%, sans ironie ni revival forcé.",
+      "parcours": "Geneviève Ryan Martel, fille de musiciens classiques, apprend la batterie à 5 ans avant de découvrir Tiësto à 8 ans — un choc qui la marque assez pour qu'elle nomme son chien en son hommage. D'abord active sous le nom Ryan Playground (pop électronique, dès 2016), elle crée TDJ — pour « Terrain de jeux » — en 2019 pour explorer sans détour l'eurodance et la trance de son enfance, épaulée par son partenaire Lucas. Après les EPs « TDJ001 » et « TDJ002 », salués par Trax Magazine et Tsugi, elle réunit ses morceaux dans « TDJ123 », sorti le 17 juin 2025.",
+      "reseaux": {
+        "spotify": null,
+        "instagram": null,
+        "tiktok": null,
+        "facebook": null,
+        "siteWeb": "https://spfinfini.world"
+      },
+      "albums": [
+        "tdj-tdj123"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "TDJ revives 90s-2000s eurodance and trance with undimmed fervour, blending childhood nostalgia and raw emotion, between rave euphoria and emo melancholy. A time capsule embraced 100%, without irony or forced revival.",
+      "parcours_en": "Geneviève Ryan Martel, daughter of classical musicians, learned drums at age 5 before discovering Tiësto at 8 — a shock that marked her enough to name her dog in his honour. First active under the name Ryan Playground (electronic pop, from 2016), she created TDJ — for « Terrain de jeux » (“playground”) — in 2019 to dive straight into the eurodance and trance of her childhood, backed by her partner Lucas. After the EPs « TDJ001 » and « TDJ002 », praised by Trax Magazine and Tsugi, she brought her tracks together on « TDJ123 », released on June 17, 2025."
+    },
+    {
+      "id": "eloi",
+      "nom": "Eloi",
+      "genre": "dance",
+      "statut": "publie",
+      "datePublication": "2025-04-25",
+      "ville": "Montrouge",
+      "pays": "France",
+      "meta": "Montrouge · album « Blast »",
+      "photo": null,
+      "photoAlt": "Portrait d'Eloi",
+      "youtube": "k8t1gRYwI1Y",
+      "description": "Eloi construit une eurodance électrique et féroce, entre coldwave, electroclash et hyperpop — terme qu'elle récuse, préférant parler d'un style hybride inspiré de synthpop et de drum and bass. Basses tranchantes, élans new wave et énergie de piste de danse caractérisent un univers pensé comme un collage visuel et sonore total.",
+      "parcours": "Née Éloïse Leau à Paris en 1998, fille d'un auteur-compositeur ayant collaboré avec Marie Laforêt et d'une productrice de cinéma, elle reçoit une formation classique au piano avant une adolescence marquée par les fugues. Diplômée des Arts Décoratifs puis des Beaux-Arts de Paris, elle sort son premier EP « Acedia » en 2020, puis se fait connaître par une reprise remarquée de Wejdene avant « Pyrale » et un premier album, « Dernier Orage » (2023). Avec « Blast » (2025), huit titres entre electroclash et new wave, elle s'impose sur la scène électronique.",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/el0000i/",
+        "tiktok": null,
+        "facebook": null,
+        "siteWeb": null
+      },
+      "albums": [
+        "eloi-blast"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Eloi builds an electric, fierce eurodance, between coldwave, electroclash and hyperpop — a label she rejects, preferring to describe a hybrid style inspired by synthpop and drum and bass. Cutting basslines, new wave surges and dancefloor energy define a world conceived as a total visual and sonic collage.",
+      "parcours_en": "Born Éloïse Leau in Paris in 1998, daughter of a songwriter who collaborated with Marie Laforêt and a film producer, she received classical piano training before teenage years marked by running away from home. A graduate of the Arts Décoratifs and then the Beaux-Arts de Paris, she released her first EP « Acedia » in 2020, then made a name for herself with a widely noticed cover of Wejdene before « Pyrale » and a first album, « Dernier Orage » (2023). With « Blast » (2025), eight tracks between electroclash and new wave, she established herself on the electronic scene."
+    },
+    {
+      "id": "siks",
+      "nom": "Siks",
+      "genre": "dance",
+      "statut": "publie",
+      "datePublication": "2024-02-08",
+      "ville": "Lyon",
+      "pays": "France",
+      "meta": "Lyon · single « À La Parisienne »",
+      "photo": null,
+      "photoAlt": "Portrait de Siks",
+      "youtube": "8hsfpeJuKZI",
+      "description": "Siks produit une électro house solaire et accessible, à la croisée de l'electro pop et de la future house. Son titre « À La Parisienne » revisite l'esprit de la chanson française des années 50-60 sur une production résolument dansante, fédérant un public bien plus large que le seul circuit club.",
+      "parcours": "Nicolás Chapelan, DJ et producteur lyonnais passionné de musique électronique depuis l'enfance, perce en 2018 avec « Make Me Feel » (avec Steff Da Campo), sorti sur Hexagon, le label du Néerlandais Don Diablo, qui dépasse les 3 millions de streams. Suivent « With Me » (avec Matt Nash) puis des collaborations avec Julian Jordan et Henri PFR. Sa reprise de « La Bohème » d'Aznavour, diffusée en direct sous l'Arc de Triomphe pour le réveillon du Nouvel An 2024 devant un million de personnes sur les Champs-Élysées, le fait connaître du grand public avant « À La Parisienne ».",
+      "reseaux": {
+        "spotify": null,
+        "instagram": null,
+        "tiktok": null,
+        "facebook": null,
+        "siteWeb": null
+      },
+      "albums": [
+        "siks-la-parisienne"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Siks produces a sun-drenched, accessible electro house at the crossroads of electro pop and future house. His track « À La Parisienne » revisits the spirit of 1950s-60s French chanson over a resolutely danceable production, uniting an audience far wider than the club circuit alone.",
+      "parcours_en": "Nicolás Chapelan, a Lyon-based DJ and producer passionate about electronic music since childhood, broke through in 2018 with « Make Me Feel » (with Steff Da Campo), released on Hexagon, the label of Dutch DJ Don Diablo, which passed 3 million streams. « With Me » (with Matt Nash) followed, then collaborations with Julian Jordan and Henri PFR. His cover of Aznavour's « La Bohème », broadcast live under the Arc de Triomphe for New Year's Eve 2024 in front of a million people on the Champs-Élysées, brought him to a mainstream audience ahead of « À La Parisienne »."
+    },
+    {
+      "id": "claude",
+      "nom": "Claude",
+      "genre": "indie",
+      "statut": "publie",
+      "datePublication": "2024-10-11",
+      "ville": "Saint-Germain-en-Laye",
+      "pays": "France",
+      "meta": "Saint-Germain-en-Laye · album « In Extremis »",
+      "photo": null,
+      "photoAlt": "Portrait de Claude",
+      "youtube": "AqVJeMNNY90",
+      "description": "Claude conjugue chanson française et acid house dans une pop électro caustique et autodérisoire. Sa voix singulière, comparée à celle de Claude Nougaro sans qu'il l'ait jamais écouté, porte des textes intimes sur la solitude, l'hypocondrie, les premiers émois ou le deuil — jusqu'à faire danser sur ses propres angoisses.",
+      "parcours": "Né en 1998 à Saint-Germain-en-Laye, il grandit au conservatoire dès 6 ans (solfège, guitare, batterie) avant de s'installer à Paris pour une prépa puis cinq ans d'école de commerce. C'est le confinement de mars 2020, reclus dans sa chambre, qui le pousse à composer sous le pseudonyme Gesleir, puis sous son propre prénom avec l'EP « Bientôt la nuit » (2023). Son premier album « In Extremis » (11 octobre 2024, label Microqlima), coécrit avec Alexis Delong (Zaho de Sagazan), lui vaut d'être repéré par Eddy de Pretto, qui l'invite en première partie de sa tournée.",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/claudecestclaude/",
+        "tiktok": null,
+        "facebook": null,
+        "siteWeb": null
+      },
+      "albums": [
+        "claude-in-extremis"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Claude combines French chanson and acid house in a caustic, self-mocking electro pop. His singular voice, compared to Claude Nougaro's despite never having listened to him, carries intimate lyrics about loneliness, hypochondria, first romantic stirrings or grief — turning his own anxieties into something you can dance to.",
+      "parcours_en": "Born in 1998 in Saint-Germain-en-Laye, he grew up at the conservatory from age 6 (music theory, guitar, drums) before moving to Paris for prep school and then five years of business school. It was the March 2020 lockdown, confined to his room, that pushed him to start writing under the pseudonym Gesleir, then under his own first name with the EP « Bientôt la nuit » (2023). His first album « In Extremis » (October 11, 2024, Microqlima label), co-written with Alexis Delong (Zaho de Sagazan), got him noticed by Eddy de Pretto, who invited him to open for his tour."
+    },
+    {
+      "id": "yoa",
+      "nom": "Yoa",
+      "genre": "indie",
+      "statut": "publie",
+      "datePublication": "2025-01-31",
+      "ville": "Paris",
+      "pays": "France",
+      "meta": "Paris · album « La Favorite »",
+      "photo": null,
+      "photoAlt": "Portrait de Yoa",
+      "youtube": "X_pzk2-TH_I",
+      "description": "Yoa pratique une bedroom pop à la fois douce et caustique, où des textes très personnels — santé mentale, ruptures amicales et amoureuses, violences sexuelles — se posent sur des productions qui empruntent à la bossa nova, la techno et l'hyperpop. Sa formule, « my name is Yoa and I sing sad french songs », résume un univers à fleur de peau.",
+      "parcours": "Née Yoanna Bolzli le 24 décembre 1998 à Paris, d'un père suisse jurassien et d'une mère camerounaise, elle débute au théâtre — pièce coécrite et jouée avec Léa Goldstein de 2020 à 2022 — avant de publier l'EP « Attentes » (2021), puis « Chansons tristes » (2022) et « Nulle » (2024). Son premier album « La Favorite » (31 janvier 2025), produit avec Charlie Trimbur (collaborateur d'Eddy de Pretto et Woodkid), lui vaut la Victoire de la Révélation Scène en 2025, avant un Olympia.",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/yoamusique/",
+        "tiktok": null,
+        "facebook": "https://www.facebook.com/yoamusique",
+        "siteWeb": null
+      },
+      "albums": [
+        "yoa-la-favorite"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Yoa makes bedroom pop that is both soft and caustic, where deeply personal lyrics — mental health, broken friendships and relationships, sexual violence — sit over productions borrowing from bossa nova, techno and hyperpop. Her tagline, “my name is Yoa and I sing sad french songs,” sums up a raw, exposed-nerve world.",
+      "parcours_en": "Born Yoanna Bolzli on December 24, 1998 in Paris, to a father from the Swiss Jura and a Cameroonian mother, she started out in theatre — a play co-written and performed with Léa Goldstein from 2020 to 2022 — before releasing the EP « Attentes » (2021), then « Chansons tristes » (2022) and « Nulle » (2024). Her first album « La Favorite » (January 31, 2025), produced with Charlie Trimbur (a collaborator of Eddy de Pretto and Woodkid), earned her the Victoire for Stage Discovery of the Year in 2025, ahead of a show at the Olympia."
+    },
+    {
+      "id": "liv-del-estal",
+      "nom": "Liv del Estal",
+      "genre": "indie",
+      "statut": "publie",
+      "datePublication": "2021-06-04",
+      "ville": "Paris",
+      "pays": "France",
+      "meta": "Paris · EP « Ma vie en vrac »",
+      "photo": null,
+      "photoAlt": "Portrait de Liv del Estal",
+      "youtube": "74Tfy1bcm_M",
+      "description": "Liv del Estal navigue dans une pop indie introspective et bohème, marquée par la poésie et la chanson française d'antan, portée par une écriture directe sur les failles et les hésitations de l'âge adulte. Sa voix, « un peu cassée » et presque comédienne selon les mots de sa coach Zazie, sert des chansons sans artifice ni grandiloquence.",
+      "parcours": "Née le 14 janvier 1996 à Paris, fille de l'acteur Stéphane Freiss et d'une mère argentine, elle grandit dans le milieu artistique et se forme au chant, à la danse et au théâtre dès l'enfance, avant d'intégrer le Cours Florent. Révélée en 2018 dans l'équipe de Zazie à The Voice (saison 7), elle signe chez Decca Records puis Universal Music, et mène en parallèle une carrière d'actrice (la série « Validé » de Franck Gastambide sur Canal+). Son premier EP « Ma vie en vrac » (2021), porté par les singles « La première fois » et « Pas fait exprès », affirme une identité pop loin des sentiers du télécrochet.",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/livdelestal",
+        "tiktok": "https://www.tiktok.com/@livmepasalone",
+        "facebook": "https://www.facebook.com/LIVDELESTAL",
+        "siteWeb": null
+      },
+      "albums": [
+        "liv-del-estal-ma-vie-en-vrac"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Liv del Estal navigates an introspective, bohemian indie pop, marked by poetry and old-school French chanson, carried by direct writing about the cracks and hesitations of adulthood. Her voice, “a little broken” and almost actorly according to her coach Zazie, serves songs with no artifice or grandiloquence.",
+      "parcours_en": "Born on January 14, 1996 in Paris, daughter of actor Stéphane Freiss and an Argentine mother, she grew up in an artistic environment and trained in singing, dance and theatre from childhood, before joining the Cours Florent drama school. Discovered in 2018 on Zazie's team on The Voice (season 7), she signed with Decca Records and then Universal Music, while also pursuing an acting career (Franck Gastambide's series « Validé » on Canal+). Her first EP « Ma vie en vrac » (2021), carried by the singles « La première fois » and « Pas fait exprès », asserted a pop identity far from the talent-show mould."
+    },
+    {
+      "id": "frieda",
+      "nom": "Frieda",
+      "genre": "hybrid",
+      "statut": "publie",
+      "datePublication": "2025-01-19",
+      "ville": "Montreuil",
+      "pays": "France",
+      "meta": "Montreuil · EP « Derrière le soleil »",
+      "photo": null,
+      "photoAlt": "Portrait de Frieda",
+      "youtube": "AAnyxoan9XI",
+      "description": "Frieda fusionne gospel, hip hop et chanson à texte dans une pop théâtrale et grandiloquente. Sa voix puissante et vulnérable porte des textes sur l'acceptation de soi et les injonctions sociales, dans une mise en scène scintillante et habitée.",
+      "parcours": "Formée au piano au Conservatoire dès l'enfance, elle traverse un burn-out avant de se consacrer pleinement à la scène. Sélectionnée par le dispositif Le Fair en 2025, elle a déjà partagé l'affiche de l'Afropunk Festival avec Janelle Monáe et Solange.",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/i.am.frieda/",
+        "tiktok": "https://www.tiktok.com/@i.am.frieda",
+        "facebook": "https://www.facebook.com/iamfrieda/",
+        "siteWeb": null
+      },
+      "albums": [
+        "frieda-derri-re-le-soleil"
+      ],
+      "interviewsIds": [
+        "frieda"
+      ],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Frieda fuses gospel, hip hop and French singer-songwriter tradition into a theatrical, grandiloquent pop. Her powerful, vulnerable voice carries lyrics about self-acceptance and social pressure, in a shimmering, deeply inhabited staging.",
+      "parcours_en": "Trained in piano at the Conservatoire from childhood, she went through burnout before devoting herself fully to the stage. Selected by the Le Fair programme in 2025, she has already shared the Afropunk Festival bill with Janelle Monáe and Solange."
+    },
+    {
+      "id": "tiago-caetano",
+      "nom": "Tiago Caetano",
+      "genre": "hybrid",
+      "statut": "publie",
+      "datePublication": "2024-11-15",
+      "ville": "Rennes",
+      "pays": "France",
+      "meta": "Rennes · album « Eco da Baía »",
+      "photo": null,
+      "photoAlt": "Portrait de Tiago Caetano",
+      "youtube": "x4y_GoV7oTM",
+      "description": "Tiago Caetano réinvente la MPB (musique populaire brésilienne) en y glissant des touches d'indie pop héritées de Beach Fossils et du label Captured Tracks, découvertes au lycée rennais entre Trans Musicales et Route du Rock. Le résultat est une musique douce et solaire, suspendue entre deux rives, deux langues et deux mémoires.",
+      "parcours": "Né Tiago Ribeiro Caetano à Rennes d'une mère carioca et d'un père portugais, il commence la guitare à 11 ans avec la certitude immédiate de vouloir en faire son métier. D'abord actif sous le pseudonyme Niteroy — du nom de la ville natale de sa mère —, il choisit son propre nom pour ce qu'il décrit comme un « reboot » plus mature. Il enregistre « Eco da Baía » en quelques semaines dans la maison de ses grands-parents près de Saint-Malo, après plusieurs mois passés au Brésil à noter des bribes de vie dans un carnet, traduites ensuite avec l'aide de sa mère et d'amis brésiliens — lui qui n'a appris à écrire le portugais qu'à partir de 2017.",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/tiagocaetanomusic/",
+        "tiktok": null,
+        "facebook": "https://www.facebook.com/TiagoCaetanomusic/",
+        "siteWeb": null
+      },
+      "albums": [
+        "tiago-caetano-eco-da-ba-a"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Tiago Caetano reinvents MPB (Brazilian popular music) by slipping in touches of indie pop inherited from Beach Fossils and the Captured Tracks label, discovered in high school in Rennes between the Trans Musicales and Route du Rock festivals. The result is a gentle, sun-drenched music, suspended between two shores, two languages and two memories.",
+      "parcours_en": "Born Tiago Ribeiro Caetano in Rennes to a mother from Rio de Janeiro and a Portuguese father, he started guitar at 11 with the immediate certainty that he wanted to make it his career. First active under the pseudonym Niteroy — after his mother's hometown — he chose his own name for what he describes as a more mature “reboot.” He recorded « Eco da Baía » in a few weeks at his grandparents' house near Saint-Malo, after spending several months in Brazil jotting down fragments of life in a notebook, later translated with help from his mother and Brazilian friends — having only learned to write Portuguese starting in 2017."
+    },
+    {
+      "id": "nina-versyp",
+      "nom": "Nina Versyp",
+      "genre": "hybrid",
+      "statut": "publie",
+      "datePublication": "2024-02-27",
+      "ville": "Paris",
+      "pays": "France",
+      "meta": "Paris · EP « Paralysed »",
+      "photo": null,
+      "photoAlt": "Portrait de Nina Versyp",
+      "youtube": "5gT5mSNB28I",
+      "description": "Nina Versyp mélange la délicatesse de la folk aux aspérités du rock dans une pop onirique et parfois vénéneuse, où une rythmique trip hop nineties peut soudain affleurer sous une guitare électrique minimaliste. Sur scène, seule avec sa guitare électrique, elle balance dans leur forme la plus brute des chansons composées dans sa chambre.",
+      "parcours": "Née fin 1999, elle grandit en road trip permanent au gré des affectations de son père diplomate — Shenzhen, Washington D.C., Bristol — ce qui nourrit directement des chansons comme « Moved Around » sur le sentiment de n'être jamais vraiment d'un seul endroit. Elle commence la guitare à 6 ans pour imiter son grand frère, remporte le concours « Chanter 20 ans en 21 » de Radio France pendant la pandémie, ce qui lui offre un premier grand concert au studio 104. En studio, elle s'entoure du producteur Alexis Delong (Zaho de Sagazan, Yoa) et de la harpiste Laure Brisa pour son EP « Paralysed ». Lauréate du prix Chorus et du Coup de cœur Rock en Seine 2024, elle est repérée par le dispositif Le Fair pour 2025.",
+      "reseaux": {
+        "spotify": null,
+        "instagram": "https://www.instagram.com/ninaversyp/",
+        "tiktok": null,
+        "facebook": "https://www.facebook.com/versypnina",
+        "siteWeb": null
+      },
+      "albums": [
+        "nina-versyp-paralysed"
+      ],
+      "interviewsIds": [],
+      "articlesIds": [],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "description_en": "Nina Versyp mixes the delicacy of folk with the rough edges of rock in a dreamlike, sometimes venomous pop, where a nineties trip hop rhythm can suddenly surface beneath a minimalist electric guitar. On stage, alone with her electric guitar, she delivers, in their rawest form, songs written in her bedroom.",
+      "parcours_en": "Born in late 1999, she grew up on a permanent road trip following her diplomat father's postings — Shenzhen, Washington D.C., Bristol — which directly fuels songs like « Moved Around », about never quite feeling from just one place. She started guitar at 6 to copy her older brother, won Radio France's “Chanter 20 ans en 21” competition during the pandemic, which gave her a first major concert at Studio 104. In the studio, she worked with producer Alexis Delong (Zaho de Sagazan, Yoa) and harpist Laure Brisa on her EP « Paralysed ». Winner of the Chorus prize and the Rock en Seine 2024 Coup de Cœur, she was selected by the Le Fair programme for 2025."
+    }
+  ]
+}

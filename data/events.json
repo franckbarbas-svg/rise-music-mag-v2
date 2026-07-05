@@ -1,0 +1,43 @@
+{
+  "events": [
+    {
+      "id": "frieda-la-mecanique-ondulatoire-2026-08-14",
+      "titre": "FRIEDA en concert",
+      "artisteId": "frieda",
+      "artisteNom": "Frieda",
+      "date": "2026-08-14T20:30:00",
+      "ville": "Paris",
+      "salle": "La Mécanique Ondulatoire",
+      "pays": "France",
+      "billetterie": null,
+      "statut": "exemple",
+      "image": null
+    },
+    {
+      "id": "theodora-glazart-2026-09-05",
+      "titre": "Theodora en concert",
+      "artisteId": "theodora",
+      "artisteNom": "Theodora",
+      "date": "2026-09-05T19:30:00",
+      "ville": "Paris",
+      "salle": "Glazart",
+      "pays": "France",
+      "billetterie": null,
+      "statut": "exemple",
+      "image": null
+    },
+    {
+      "id": "tdj-mtelus-2026-10-02",
+      "titre": "TDJ en concert",
+      "artisteId": "tdj",
+      "artisteNom": "TDJ",
+      "date": "2026-10-02T21:00:00",
+      "ville": "Montréal",
+      "salle": "MTELUS",
+      "pays": "Canada",
+      "billetterie": null,
+      "statut": "exemple",
+      "image": null
+    }
+  ]
+}

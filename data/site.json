@@ -1,0 +1,138 @@
+{
+  "identite": {
+    "nom": "Rise Music Mag",
+    "tagline": "Musique, artistes et actualité musicale",
+    "description": "Rise Music Mag est un média musical indépendant qui découvre de nouveaux talents et suit l'actualité des artistes confirmés. Clips, interviews et culture musicale, pop, dance et au-delà.",
+    "url": "https://risemusicmag.fr",
+    "langue": "fr",
+    "auteurDefault": "Rise Music Mag",
+    "email": null,
+    "ogImage": "/images/og/og-image.jpg"
+  },
+  "couleurs": {
+    "bg": "#0A0A0F",
+    "bg2": "#101018",
+    "card": "#14141E",
+    "gold": "#C8A44E",
+    "gold2": "#E8C46A",
+    "paper": "#E8E2D4",
+    "paper2": "#DDD5C2",
+    "ink": "#0A0A0F",
+    "txt": "#F0EDE6"
+  },
+  "genres": [
+    {
+      "id": "pop",
+      "label": "Pop & Nouvelle Variété",
+      "couleurVar": "--pop",
+      "couleur": "#E85D9B"
+    },
+    {
+      "id": "afro",
+      "label": "Afro & Global Pop",
+      "couleurVar": "--afro",
+      "couleur": "#3ECFA0"
+    },
+    {
+      "id": "dance",
+      "label": "Dance & Club Pop",
+      "couleurVar": "--dance",
+      "couleur": "#4FD8E0"
+    },
+    {
+      "id": "indie",
+      "label": "Bedroom Pop & Indie",
+      "couleurVar": "--indie",
+      "couleur": "#5BA4E6"
+    },
+    {
+      "id": "hybrid",
+      "label": "Hybrid & Future Pop",
+      "couleurVar": "--hybrid",
+      "couleur": "#8B6CC1"
+    }
+  ],
+  "navigation": [
+    {
+      "id": "home",
+      "label": "Accueil",
+      "path": "/"
+    },
+    {
+      "id": "talents",
+      "label": "Artistes",
+      "path": "/artistes"
+    },
+    {
+      "id": "interview",
+      "label": "Interviews",
+      "path": "/interviews"
+    },
+    {
+      "id": "articles",
+      "label": "Actualités",
+      "path": "/actualites"
+    },
+    {
+      "id": "albums",
+      "label": "Albums",
+      "path": "/albums"
+    },
+    {
+      "id": "agenda",
+      "label": "Concerts",
+      "path": "/concerts"
+    },
+    {
+      "id": "galerie",
+      "label": "Galerie",
+      "path": "/galerie"
+    },
+    {
+      "id": "about",
+      "label": "À propos",
+      "path": "/about"
+    },
+    {
+      "id": "partenariats",
+      "label": "Partenaires",
+      "path": "/partenariats"
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "path": "/contact"
+    }
+  ],
+  "footerLinks": [
+    {
+      "id": "legal",
+      "label": "Mentions légales",
+      "path": "/mentions-legales"
+    },
+    {
+      "id": "confidentialite",
+      "label": "Politique de confidentialité",
+      "path": "/confidentialite"
+    }
+  ],
+  "reseaux": {
+    "instagram": null,
+    "facebook": null,
+    "tiktok": null,
+    "youtube": null
+  },
+  "pageTitles": {
+    "talents": "Artistes à découvrir",
+    "interview": "Interviews",
+    "articles": "Actualités",
+    "albums": "Albums",
+    "agenda": "Concerts",
+    "galerie": "Galerie photo",
+    "about": "À propos",
+    "partenariats": "Partenariats",
+    "contact": "Proposer un artiste",
+    "legal": "Mentions légales",
+    "confidentialite": "Politique de confidentialité"
+  }
+}

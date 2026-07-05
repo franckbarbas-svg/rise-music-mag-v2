@@ -1,0 +1,134 @@
+/**
+ * Rise Music Mag — Utilitaires
+ * ----------------------------------------------------------------
+ * Loader plein écran au chargement, toasts de notification.
+ */
+
+#loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: var(--bg);
+  display: grid;
+  place-items: center;
+  transition: opacity .6s ease, visibility .6s ease;
+}
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.loader-anim {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+.loader-anim::before,
+.loader-anim::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 3px solid transparent;
+}
+.loader-anim::before {
+  border-top-color: var(--gold);
+  animation: spin 1s linear infinite;
+}
+.loader-anim::after {
+  border-bottom-color: var(--gold2);
+  animation: spin .8s linear infinite reverse;
+}
+.loader-text {
+  margin-top: 16px;
+  color: var(--txt2);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  animation: pulseText 1.5s ease infinite;
+}
+
+.toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--card);
+  border: 1px solid rgba(200, 164, 78, .35);
+  color: var(--txt);
+  padding: 12px 20px;
+  border-radius: 999px;
+  font-size: .82rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .5);
+  z-index: 5000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+}
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+.toast svg {
+  width: 15px;
+  height: 15px;
+  stroke: var(--gold);
+  fill: none;
+  flex-shrink: 0;
+}
+.toast.error { border-color: rgba(232, 99, 90, .4); }
+.toast.error svg { stroke: #E8635A; }
+
+/* ---------------------------------------------------------------
+   Bannière de mise à jour PWA (js/pwa.js)
+   --------------------------------------------------------------- */
+
+.update-banner {
+  position: fixed;
+  left: 50%;
+  bottom: 28px;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--card);
+  border: 1px solid rgba(200, 164, 78, .35);
+  color: var(--txt);
+  padding: 12px 14px 12px 20px;
+  border-radius: 999px;
+  font-size: .82rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, .5);
+  z-index: 5000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease, transform .3s ease;
+  max-width: calc(100vw - 40px);
+}
+.update-banner.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.update-banner-btn {
+  font-family: inherit;
+  font-size: .74rem;
+  font-weight: 800;
+  letter-spacing: .02em;
+  color: #0A0A0F;
+  background: var(--gold);
+  border: none;
+  border-radius: 999px;
+  padding: 7px 16px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background .2s;
+}
+.update-banner-btn:hover {
+  background: var(--gold2);
+}

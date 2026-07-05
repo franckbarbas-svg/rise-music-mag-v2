@@ -1,0 +1,250 @@
+/**
+ * Rise Music Mag — Navigation
+ * ----------------------------------------------------------------
+ * Barre de navigation fixe (desktop) + menu plein écran (mobile).
+ * Le logo SVG est injecté en inline dans le HTML (voir components/)
+ * avec des IDs de gradient namespacés pour éviter les conflits DOM
+ * quand le logo apparaît plusieurs fois sur une même page (nav + footer + menu mobile).
+ */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--nav);
+  z-index: 1000;
+  background: rgba(10, 10, 15, .85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--line);
+  transition: background .3s;
+}
+.nav.scrolled {
+  background: rgba(10, 10, 15, .97);
+}
+
+.nav-in {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---------------------------------------------------------------
+   Logo
+   --------------------------------------------------------------- */
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.logo picture {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  line-height: 1;
+}
+
+.logo-symbol {
+  width: 36px;
+  height: 33px;
+  flex-shrink: 0;
+  object-fit: contain;
+  transition: transform .3s;
+}
+.logo:hover .logo-symbol {
+  transform: scale(1.08);
+}
+
+.logo-rise {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.7rem;
+  color: var(--txt);
+  letter-spacing: .08em;
+  line-height: 1;
+  transition: all .3s;
+}
+.logo:hover .logo-rise {
+  background: linear-gradient(135deg, #C8A44E, #E8C46A);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-bar {
+  display: block;
+  width: 100%;
+  height: 1.5px;
+  background: linear-gradient(90deg, var(--gold), transparent);
+}
+
+.logo-sub {
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: .46rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: .28em;
+  text-transform: uppercase;
+}
+
+/* ---------------------------------------------------------------
+   Liens desktop
+   --------------------------------------------------------------- */
+
+.links {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  align-items: center;
+}
+
+.links a {
+  font-size: .74rem;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--txt2);
+  padding: 6px 12px;
+  transition: color .2s, background .2s;
+}
+.links a:hover,
+.links a.current {
+  color: var(--txt);
+  background: rgba(255, 255, 255, .05);
+}
+
+/* ---------------------------------------------------------------
+   Bascule de langue FR/EN
+   --------------------------------------------------------------- */
+
+.lang-switch {
+  font-family: inherit;
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--gold);
+  background: none;
+  border: 1px solid rgba(200, 164, 78, .35);
+  border-radius: 2px;
+  padding: 5px 11px;
+  margin-left: 8px;
+  cursor: pointer;
+  transition: border-color .2s, background .2s, color .2s;
+}
+.lang-switch:hover {
+  border-color: var(--gold);
+  background: rgba(200, 164, 78, .08);
+  color: var(--gold2);
+}
+
+.mnav .lang-switch {
+  display: block;
+  width: calc(100% - 48px);
+  margin: 20px 24px 0;
+  padding: 12px 16px;
+  font-size: .78rem;
+  text-align: center;
+}
+
+/* ---------------------------------------------------------------
+   Burger + menu mobile plein écran
+   --------------------------------------------------------------- */
+
+.burger {
+  display: none;
+  width: 38px;
+  height: 38px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+  position: relative;
+  transition: border-color .2s;
+  flex-shrink: 0;
+}
+.burger:hover {
+  border-color: var(--gold);
+}
+.burger span {
+  position: absolute;
+  left: 10px;
+  width: 18px;
+  height: 2px;
+  background: var(--txt);
+  transition: .25s;
+  border-radius: 2px;
+}
+.burger span:nth-child(1) { top: 13px; }
+.burger span:nth-child(2) { top: 18px; }
+.burger span:nth-child(3) { top: 23px; }
+.burger.open span:nth-child(1) { transform: translateY(5px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; transform: translateX(6px); }
+.burger.open span:nth-child(3) { transform: translateY(-5px) rotate(-45deg); }
+
+.mnav {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  z-index: 2000;
+  transform: translateX(100%);
+  visibility: hidden;
+  transition: transform .3s cubic-bezier(.4, 0, .2, 1), visibility .3s;
+  padding-top: var(--nav);
+  overflow-y: auto;
+}
+.mnav.open {
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.mnav-logo {
+  padding: 20px 24px 0;
+  margin-bottom: 8px;
+}
+
+.mnav a {
+  display: block;
+  padding: 18px 24px;
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: #fff;
+  border-bottom: 1px solid #1a1a24;
+  transition: color .2s, padding-left .2s;
+}
+.mnav a:hover {
+  color: var(--gold);
+  padding-left: 32px;
+}
+
+/* ---------------------------------------------------------------
+   Barre de progression de lecture
+   --------------------------------------------------------------- */
+
+#progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--gold), var(--gold2));
+  z-index: 9999;
+  width: 0%;
+  transition: width .1s ease;
+}
+
+@media (max-width: 900px) {
+  .links { display: none; }
+  .burger { display: block; }
+}

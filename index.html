@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rise Music Mag</title>
+<meta name="description" content="Rise Music Mag est un média musical indépendant qui découvre de nouveaux talents et suit l'actualité des artistes confirmés.">
+
+<!-- Favicons -->
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/logo/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/images/logo/favicon-16.png">
+<link rel="apple-touch-icon" href="/images/logo/favicon-192.png">
+<link rel="manifest" href="/manifest.json">
+<meta name="theme-color" content="#0A0A0F">
+
+<!-- Préchargement des ressources critiques -->
+<!-- Pas de préchargement de police : le site utilise actuellement uniquement
+     des polices système (cf. css/typography.css, --font-display et
+     --font-editorial pointent vers des piles système, aucun @font-face).
+     Si une police custom est ajoutée plus tard (ex: une vraie "Roboto
+     Condensed" auto-hébergée plutôt que sa simulation via la pile système),
+     ajouter ici un <link rel="preload" as="font" type="font/woff2" crossorigin>
+     vers le fichier .woff2 réellement utilisé. -->
+<link rel="preload" href="/css/main.css" as="style">
+<link rel="preload" href="/js/app.js" as="script" crossorigin>
+<link rel="preload" href="/images/logo/logo-symbol.webp" as="image" type="image/webp">
+
+<link rel="stylesheet" href="/css/main.css">
+
+<!-- Open Graph / Twitter Card par défaut (surchargés par page via js/seo.js) -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Rise Music Mag">
+<meta property="og:title" content="Rise Music Mag">
+<meta property="og:description" content="Média musical indépendant — artistes émergents, interviews, actualité.">
+<meta property="og:image" content="/images/og/og-image.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Netlify Identity widget : nécessaire pour que les liens d'invitation par
+     email envoyés depuis le tableau de bord Netlify (section Identity)
+     fonctionnent correctement. Le script de redirection post-connexion est
+     juste avant </body>. Coût négligible (chargé en différé, petit script). -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+
+<div id="progressBar"></div>
+
+<nav class="nav" id="main-nav">
+  <div class="nav-in">
+    <span id="nav-logo"></span>
+    <ul class="links" id="nav-links"></ul>
+    <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mnav">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="mnav" id="mnav">
+  <div class="mnav-logo" id="mnav-logo"></div>
+  <nav id="mnav-links" aria-label="Menu mobile"></nav>
+</div>
+
+<main id="app" role="main"></main>
+
+<!--
+  Formulaire statique caché, invisible et jamais affiché à l'utilisateur.
+  Nécessaire uniquement parce que Rise Music Mag est une SPA : Netlify
+  détecte les formulaires "data-netlify" en scannant le HTML au moment du
+  build, AVANT que le JavaScript ne s'exécute. Sans cette copie statique,
+  le formulaire réellement affiché (généré par js/render-static-pages.js)
+  ne serait jamais détecté par Netlify et les soumissions échoueraient.
+  Les champs ci-dessous doivent rester strictement identiques (mêmes
+  name="...") à ceux du formulaire réel.
+-->
+<form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+  <input type="text" name="name">
+  <input type="email" name="email">
+  <select name="subject"><option value="artiste"></option><option value="presse"></option><option value="autre"></option></select>
+  <textarea name="message"></textarea>
+  <input name="bot-field">
+</form>
+
+
+<footer>
+  <div class="foot-top">
+    <div class="foot-brand">
+      <div id="footer-logo"></div>
+      <p>Média musical indépendant. Découverte d'artistes émergents et confirmés, interviews exclusives et actualité musicale.</p>
+    </div>
+    <div id="footer-cols" style="display:contents"></div>
+  </div>
+  <div class="foot-bottom">
+    <span class="copy">© <span id="footer-year"></span> Rise Music Mag. Tous droits réservés.</span>
+    <div id="footer-social"></div>
+  </div>
+</footer>
+
+<div id="loader">
+  <div style="text-align:center">
+    <div class="loader-anim"></div>
+    <div class="loader-text">Chargement</div>
+  </div>
+</div>
+
+<script>
+  document.getElementById('footer-year').textContent = new Date().getFullYear();
+  // Sécurité : si le JS principal échoue à charger ou plante avant d'avoir
+  // pu masquer le loader, on le masque quand même après un délai pour ne
+  // jamais bloquer l'utilisateur derrière un écran de chargement infini.
+  setTimeout(() => {
+    const l = document.getElementById('loader');
+    if (l && !l.classList.contains('hidden')) l.classList.add('hidden');
+  }, 6000);
+</script>
+<script type="module" src="/js/app.js"></script>
+
+<!-- Redirige vers /admin/ après une connexion réussie via un lien d'invitation
+     par email (sinon l'utilisateur reste bloqué sur la page d'accueil après
+     avoir cliqué sur "Confirmer mon compte" dans l'email Netlify Identity). -->
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on('init', (user) => {
+      if (!user) {
+        window.netlifyIdentity.on('login', () => {
+          document.location.href = '/admin/';
+        });
+      }
+    });
+  }
+</script>
+</body>
+</html>

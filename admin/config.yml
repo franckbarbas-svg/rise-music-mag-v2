@@ -1,0 +1,673 @@
+# Rise Music Mag — Configuration Decap CMS
+# ----------------------------------------------------------------
+# Authentification via Netlify Identity + Git Gateway : aucune app OAuth
+# à configurer manuellement, Netlify s'en charge nativement (voir
+# README-admin.md pour l'activation côté tableau de bord Netlify).
+#
+# IMPORTANT : chaque collection ci-dessous correspond à UN SEUL fichier
+# JSON (file collection), pas un fichier par entrée. C'est volontaire :
+# js/data-store.js charge ces fichiers tels quels au démarrage du site.
+# Ne jamais changer un "file:" vers une "folder:" sans adapter aussi
+# data-store.js en conséquence.
+
+backend:
+  name: git-gateway
+  branch: main
+
+# publish_mode "simple" (= comportement par défaut, explicité ici) : chaque
+# sauvegarde commit directement sur la branche main. "editorial_workflow"
+# ajoute un système de brouillon/review/PR pensé pour des équipes — inutile
+# et plus lourd pour un opérateur solo comme Franck (cf. doc Decap : "the
+# editorial workflow is a pain for solo publishers").
+publish_mode: simple
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+locale: "fr"
+
+collections:
+  # =================================================================
+  # ARTISTES
+  # =================================================================
+  - name: "artistes"
+    label: "Artistes"
+    label_singular: "Artiste"
+    description: "Les fiches artistes du magazine. L'identifiant (slug) ne doit jamais être modifié après création : interviews, albums et articles y font référence."
+    files:
+      - file: "data/artistes.json"
+        label: "Artistes"
+        name: "artistes"
+        fields:
+          - label: "Artistes"
+            name: "artistes"
+            widget: "list"
+            summary: "{{fields.nom}} — {{fields.ville}}"
+            fields:
+              - label: "Identifiant (slug)"
+                name: "id"
+                widget: "string"
+                hint: "⚠️ Ne jamais modifier après création — sert de référence pour les interviews, albums et articles liés. Format recommandé : minuscules, tirets, sans accents (ex: sam-sauvage)."
+                pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lettres minuscules, chiffres et tirets uniquement, sans espace ni accent"]
+
+              - label: "Nom de l'artiste"
+                name: "nom"
+                widget: "string"
+
+              - label: "Genre musical"
+                name: "genre"
+                widget: "select"
+                options:
+                  - { label: "Pop & Nouvelle Variété", value: "pop" }
+                  - { label: "Afro & Global Pop", value: "afro" }
+                  - { label: "Dance & Club Pop", value: "dance" }
+                  - { label: "Bedroom Pop & Indie", value: "indie" }
+                  - { label: "Hybrid & Future Pop", value: "hybrid" }
+
+              - label: "Statut de publication"
+                name: "statut"
+                widget: "select"
+                options:
+                  - { label: "Publié (visible sur le site)", value: "publie" }
+                  - { label: "Brouillon (caché)", value: "brouillon" }
+                default: "brouillon"
+
+              - label: "Date de publication"
+                name: "datePublication"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                picker_utc: true
+                hint: "Programmable dans le futur : l'entrée n'apparaîtra sur le site qu'à partir de cette date si le statut est 'Publié'."
+
+              - label: "Ville"
+                name: "ville"
+                widget: "string"
+
+              - label: "Pays"
+                name: "pays"
+                widget: "string"
+                default: "France"
+
+              - label: "Texte court (actualité du moment)"
+                name: "meta"
+                widget: "string"
+                hint: "Ex: « Boulogne-sur-Mer · album « Mesdames, Messieurs ! » ». Affiché sous le nom sur les cartes."
+
+              - label: "Photo principale"
+                name: "photo"
+                widget: "image"
+                required: false
+                hint: "Si vide, une miniature YouTube sera utilisée automatiquement (si un ID YouTube est renseigné)."
+
+              - label: "Texte alternatif de la photo"
+                name: "photoAlt"
+                widget: "string"
+                required: false
+
+              - label: "ID vidéo YouTube"
+                name: "youtube"
+                widget: "string"
+                required: false
+                hint: "Uniquement l'identifiant, pas l'URL complète. Ex: pour https://youtube.com/watch?v=AAnyxoan9XI, entrer AAnyxoan9XI"
+
+              - label: "Description / présentation"
+                name: "description"
+                widget: "text"
+                required: false
+
+              - label: "Parcours / biographie détaillée"
+                name: "parcours"
+                widget: "text"
+                required: false
+
+              - label: "Réseaux sociaux"
+                name: "reseaux"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Spotify", name: "spotify", widget: "string", required: false }
+                  - { label: "Instagram", name: "instagram", widget: "string", required: false }
+                  - { label: "TikTok", name: "tiktok", widget: "string", required: false }
+                  - { label: "Facebook", name: "facebook", widget: "string", required: false }
+                  - { label: "Site officiel", name: "siteWeb", widget: "string", required: false }
+
+              - label: "Albums liés (référence informative)"
+                name: "albums"
+                widget: "list"
+                required: false
+                collapsed: true
+                hint: "Identifiants d'albums liés à cet artiste. Géré automatiquement lors de la création d'un album depuis la collection Albums — modification manuelle déconseillée."
+                field: { label: "ID album", name: "albumId", widget: "string" }
+
+              - label: "Interviews liées (référence informative)"
+                name: "interviewsIds"
+                widget: "list"
+                required: false
+                collapsed: true
+                hint: "Identifiants d'interviews liées. Géré automatiquement lors de la création d'une interview référençant cet artiste — modification manuelle déconseillée."
+                field: { label: "ID interview", name: "interviewId", widget: "string" }
+
+              - label: "Articles liés (référence informative)"
+                name: "articlesIds"
+                widget: "list"
+                required: false
+                collapsed: true
+                hint: "Identifiants d'articles mentionnant cet artiste."
+                field: { label: "ID article", name: "articleId", widget: "string" }
+
+              - label: "SEO (optionnel — sinon généré automatiquement)"
+                name: "seo"
+                widget: "object"
+                collapsed: true
+                required: false
+                fields:
+                  - { label: "Titre personnalisé", name: "titre", widget: "string", required: false }
+                  - { label: "Description personnalisée", name: "description", widget: "text", required: false }
+
+  # =================================================================
+  # INTERVIEWS
+  # =================================================================
+  - name: "interviews"
+    label: "Interviews"
+    label_singular: "Interview"
+    description: "Modèle unique pour toutes les interviews (référence : fiche FRIEDA). La page, la navigation précédent/suivant et les suggestions 'Autres interviews' sont générées automatiquement par le site — rien à faire de plus ici qu'à remplir le contenu."
+    files:
+      - file: "data/interviews.json"
+        label: "Interviews"
+        name: "interviews"
+        fields:
+          - label: "Interviews"
+            name: "interviews"
+            widget: "list"
+            summary: "{{fields.nom}}"
+            fields:
+              - label: "Identifiant (slug)"
+                name: "id"
+                widget: "string"
+                hint: "⚠️ Ne jamais modifier après création."
+                pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lettres minuscules, chiffres et tirets uniquement"]
+
+              - label: "Artiste lié"
+                name: "artisteId"
+                widget: "relation"
+                collection: "artistes"
+                file: "artistes"
+                search_fields: ["artistes.*.nom"]
+                value_field: "artistes.*.id"
+                display_fields: ["artistes.*.nom"]
+                required: false
+                hint: "Laisser vide si l'artiste n'a pas encore de fiche dédiée dans la collection Artistes."
+
+              - label: "Nom affiché (généralement en majuscules)"
+                name: "nom"
+                widget: "string"
+                hint: "Ex: FRIEDA, MARGUERITE — c'est le style éditorial du site pour les titres d'interview."
+
+              - label: "Genre musical"
+                name: "genre"
+                widget: "select"
+                options:
+                  - { label: "Pop & Nouvelle Variété", value: "pop" }
+                  - { label: "Afro & Global Pop", value: "afro" }
+                  - { label: "Dance & Club Pop", value: "dance" }
+                  - { label: "Bedroom Pop & Indie", value: "indie" }
+                  - { label: "Hybrid & Future Pop", value: "hybrid" }
+
+              - label: "Statut de publication"
+                name: "statut"
+                widget: "select"
+                options:
+                  - { label: "Publié (visible sur le site)", value: "publie" }
+                  - { label: "Brouillon (caché)", value: "brouillon" }
+                default: "brouillon"
+
+              - label: "Date de publication"
+                name: "datePublication"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                picker_utc: true
+                required: false
+                hint: "Si vide, l'interview apparaît après celles datées dans la liste, plutôt qu'à sa place chronologique."
+
+              - label: "Texte court (univers · ville · actualité)"
+                name: "meta"
+                widget: "string"
+                hint: "Ex: « Hybrid & Future Pop · Montreuil · EP « Derrière le soleil » »"
+
+              - label: "Ville"
+                name: "ville"
+                widget: "string"
+                required: false
+
+              - label: "ID vidéo YouTube"
+                name: "youtube"
+                widget: "string"
+                required: false
+
+              - label: "Photo"
+                name: "photo"
+                widget: "image"
+                required: false
+                hint: "Si vide, une miniature YouTube sera utilisée automatiquement."
+
+              - label: "Texte alternatif de la photo"
+                name: "photoAlt"
+                widget: "string"
+                required: false
+
+              - label: "Bio courte (affichée en haut de la page interview)"
+                name: "bio"
+                widget: "text"
+                required: false
+
+              - label: "Auteur"
+                name: "auteur"
+                widget: "string"
+                default: "Rise Music Mag"
+
+              - label: "Temps de lecture (minutes)"
+                name: "tempsLecture"
+                widget: "number"
+                value_type: "int"
+                default: 4
+                min: 1
+                max: 30
+
+              - label: "Questions / Réponses"
+                name: "qna"
+                widget: "list"
+                summary: "{{fields.q}}"
+                hint: "Le modèle de référence (FRIEDA) compte 5 questions, mais ce n'est pas une obligation technique."
+                fields:
+                  - { label: "Question", name: "q", widget: "string" }
+                  - { label: "Réponse", name: "r", widget: "text" }
+
+              - label: "SEO (optionnel — sinon généré automatiquement)"
+                name: "seo"
+                widget: "object"
+                collapsed: true
+                required: false
+                fields:
+                  - { label: "Titre personnalisé", name: "titre", widget: "string", required: false }
+                  - { label: "Description personnalisée", name: "description", widget: "text", required: false }
+
+  # =================================================================
+  # ARTICLES (Actualités)
+  # =================================================================
+  - name: "articles"
+    label: "Actualités"
+    label_singular: "Article"
+    description: "Les 3 premières entrées sont des EXEMPLES (statut 'Exemple') à supprimer ou republier avant la mise en ligne réelle du site — voir data/README.md."
+    files:
+      - file: "data/articles.json"
+        label: "Actualités"
+        name: "articles_file"
+        fields:
+          - label: "Catégories disponibles"
+            name: "categories"
+            widget: "list"
+            collapsed: true
+            hint: "Ne pas supprimer une catégorie encore utilisée par un article existant."
+            fields:
+              - { label: "Identifiant", name: "id", widget: "string" }
+              - { label: "Libellé affiché", name: "label", widget: "string" }
+
+          - label: "Articles"
+            name: "articles"
+            widget: "list"
+            summary: "{{fields.titre}}"
+            fields:
+              - label: "Identifiant (slug)"
+                name: "id"
+                widget: "string"
+                hint: "⚠️ Ne jamais modifier après création."
+                pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lettres minuscules, chiffres et tirets uniquement"]
+
+              - label: "Titre"
+                name: "titre"
+                widget: "string"
+
+              - label: "Statut de publication"
+                name: "statut"
+                widget: "select"
+                options:
+                  - { label: "Publié (visible sur le site)", value: "publie" }
+                  - { label: "Brouillon (caché)", value: "brouillon" }
+                default: "brouillon"
+                hint: "Ne pas utiliser 'exemple' pour du contenu réel — ce statut est réservé aux entrées placeholder à remplacer."
+
+              - label: "Date de publication"
+                name: "datePublication"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                picker_utc: true
+                hint: "Programmable dans le futur."
+
+              - label: "Date de modification"
+                name: "dateModification"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                picker_utc: true
+                required: false
+
+              - label: "Catégorie"
+                name: "categorie"
+                widget: "select"
+                options:
+                  - { label: "Actu artiste", value: "actu-artiste" }
+                  - { label: "Sortie / Album", value: "sortie" }
+                  - { label: "Live report", value: "live-report" }
+                  - { label: "Découverte", value: "decouverte" }
+                  - { label: "Chronique", value: "chronique" }
+                  - { label: "Interview flash", value: "interview-flash" }
+                  - { label: "Playlist", value: "playlist" }
+                hint: "Si tu ajoutes une nouvelle catégorie dans la section 'Catégories disponibles' ci-dessus, pense à l'ajouter aussi ici (config.yml) pour qu'elle soit sélectionnable — coordination technique nécessaire pour cette synchronisation."
+
+              - label: "Tags"
+                name: "tags"
+                widget: "list"
+                required: false
+                field: { label: "Tag", name: "tag", widget: "string" }
+
+              - label: "Auteur"
+                name: "auteur"
+                widget: "string"
+                default: "Rise Music Mag"
+
+              - label: "Temps de lecture (minutes)"
+                name: "tempsLecture"
+                widget: "number"
+                value_type: "int"
+                default: 3
+                min: 1
+                max: 30
+
+              - label: "Image principale"
+                name: "image"
+                widget: "image"
+                required: false
+
+              - label: "Texte alternatif de l'image"
+                name: "imageAlt"
+                widget: "string"
+                required: false
+
+              - label: "Chapô (résumé court)"
+                name: "chapo"
+                widget: "text"
+
+              - label: "Contenu de l'article"
+                name: "contenu"
+                widget: "markdown"
+                hint: "Édité en markdown, converti en HTML pour l'affichage."
+
+              - label: "Artistes mentionnés"
+                name: "artistesIds"
+                widget: "relation"
+                collection: "artistes"
+                file: "artistes"
+                search_fields: ["artistes.*.nom"]
+                value_field: "artistes.*.id"
+                display_fields: ["artistes.*.nom"]
+                multiple: true
+                required: false
+
+              - label: "SEO (optionnel — sinon généré automatiquement)"
+                name: "seo"
+                widget: "object"
+                collapsed: true
+                required: false
+                fields:
+                  - { label: "Titre personnalisé", name: "titre", widget: "string", required: false }
+                  - { label: "Description personnalisée", name: "description", widget: "text", required: false }
+
+  # =================================================================
+  # ALBUMS
+  # =================================================================
+  - name: "albums"
+    label: "Albums"
+    label_singular: "Album"
+    description: "Albums, EPs, mixtapes et singles. Les 15 entrées existantes ont été migrées depuis les fiches artistes — pochettes et liens d'écoute restent à compléter."
+    files:
+      - file: "data/albums.json"
+        label: "Albums"
+        name: "albums"
+        fields:
+          - label: "Albums"
+            name: "albums"
+            widget: "list"
+            summary: "{{fields.titre}} — {{fields.artisteNom}}"
+            fields:
+              - label: "Identifiant (slug)"
+                name: "id"
+                widget: "string"
+                hint: "⚠️ Ne jamais modifier après création."
+                pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lettres minuscules, chiffres et tirets uniquement"]
+
+              - label: "Titre"
+                name: "titre"
+                widget: "string"
+
+              - label: "Type"
+                name: "type"
+                widget: "select"
+                options: ["Album", "EP", "Mixtape", "Single"]
+
+              - label: "Artiste"
+                name: "artisteId"
+                widget: "relation"
+                collection: "artistes"
+                file: "artistes"
+                search_fields: ["artistes.*.nom"]
+                value_field: "artistes.*.id"
+                display_fields: ["artistes.*.nom"]
+
+              - label: "Nom de l'artiste (affiché)"
+                name: "artisteNom"
+                widget: "string"
+                hint: "⚠️ Doit correspondre exactement au nom de l'artiste sélectionné ci-dessus (champ dupliqué pour la performance d'affichage, pas de synchronisation automatique)."
+
+              - label: "Année de sortie"
+                name: "anneeSortie"
+                widget: "string"
+                required: false
+                pattern: ["^[0-9]{4}$", "Format attendu : 4 chiffres, ex. 2026"]
+
+              - label: "Date de sortie complète"
+                name: "dateSortie"
+                widget: "datetime"
+                format: "YYYY-MM-DD"
+                date_format: "YYYY-MM-DD"
+                time_format: false
+                picker_utc: true
+                required: false
+
+              - label: "Genre musical"
+                name: "genre"
+                widget: "select"
+                options:
+                  - { label: "Pop & Nouvelle Variété", value: "pop" }
+                  - { label: "Afro & Global Pop", value: "afro" }
+                  - { label: "Dance & Club Pop", value: "dance" }
+                  - { label: "Bedroom Pop & Indie", value: "indie" }
+                  - { label: "Hybrid & Future Pop", value: "hybrid" }
+
+              - label: "Pochette"
+                name: "cover"
+                widget: "image"
+                required: false
+
+              - label: "Texte alternatif de la pochette"
+                name: "coverAlt"
+                widget: "string"
+                required: false
+
+              - label: "Lien Spotify"
+                name: "spotify"
+                widget: "string"
+                required: false
+
+              - label: "Lien Apple Music"
+                name: "appleMusic"
+                widget: "string"
+                required: false
+
+              - label: "Description"
+                name: "description"
+                widget: "text"
+                required: false
+
+              - label: "Statut de publication"
+                name: "statut"
+                widget: "select"
+                options:
+                  - { label: "Publié (visible sur le site)", value: "publie" }
+                  - { label: "Brouillon (caché)", value: "brouillon" }
+                default: "publie"
+
+  # =================================================================
+  # CONCERTS (Agenda)
+  # =================================================================
+  - name: "events"
+    label: "Concerts"
+    label_singular: "Concert"
+    description: "Les 3 premières entrées sont des EXEMPLES (statut 'Exemple') à supprimer ou republier avant la mise en ligne réelle du site — voir data/README.md."
+    files:
+      - file: "data/events.json"
+        label: "Concerts"
+        name: "events"
+        fields:
+          - label: "Concerts"
+            name: "events"
+            widget: "list"
+            summary: "{{fields.artisteNom}} — {{fields.ville}}"
+            fields:
+              - label: "Identifiant (slug)"
+                name: "id"
+                widget: "string"
+                hint: "⚠️ Ne jamais modifier après création."
+                pattern: ["^[a-z0-9]+(-[a-z0-9]+)*$", "Lettres minuscules, chiffres et tirets uniquement"]
+
+              - label: "Titre de l'événement"
+                name: "titre"
+                widget: "string"
+                required: false
+                hint: "Optionnel — si vide, le nom de l'artiste est utilisé à la place sur le site."
+
+              - label: "Artiste"
+                name: "artisteId"
+                widget: "relation"
+                collection: "artistes"
+                file: "artistes"
+                search_fields: ["artistes.*.nom"]
+                value_field: "artistes.*.id"
+                display_fields: ["artistes.*.nom"]
+
+              - label: "Nom de l'artiste (affiché)"
+                name: "artisteNom"
+                widget: "string"
+                hint: "⚠️ Doit correspondre exactement au nom de l'artiste sélectionné ci-dessus."
+
+              - label: "Date et heure"
+                name: "date"
+                widget: "datetime"
+                format: "YYYY-MM-DDTHH:mm:ss"
+                date_format: "YYYY-MM-DD"
+                time_format: "HH:mm"
+                picker_utc: false
+
+              - label: "Ville"
+                name: "ville"
+                widget: "string"
+
+              - label: "Salle"
+                name: "salle"
+                widget: "string"
+                required: false
+
+              - label: "Pays"
+                name: "pays"
+                widget: "string"
+                default: "France"
+
+              - label: "Lien billetterie"
+                name: "billetterie"
+                widget: "string"
+                required: false
+
+              - label: "Image"
+                name: "image"
+                widget: "image"
+                required: false
+
+              - label: "Statut de publication"
+                name: "statut"
+                widget: "select"
+                options:
+                  - { label: "Publié (visible sur le site)", value: "publie" }
+                  - { label: "Brouillon (caché)", value: "brouillon" }
+                default: "publie"
+                hint: "Ne pas utiliser 'exemple' pour du contenu réel — ce statut est réservé aux entrées placeholder à remplacer."
+
+  # =================================================================
+  # RÉGLAGES DU SITE
+  # =================================================================
+  # Expose volontairement seulement une partie de site.json : l'identité,
+  # les couleurs (avec avertissement) et les réseaux sociaux. La navigation,
+  # les genres et les titres de page restent éditables uniquement via le
+  # code (data/site.json directement), car ce sont des structures couplées
+  # au routeur (js/router.js) et au CSS (classes .tag.pop, .genre-card[data-genre]...) :
+  # un renommage depuis l'admin sans toucher au code casserait le site.
+  - name: "reglages"
+    label: "Réglages du site"
+    files:
+      - file: "data/site.json"
+        label: "Identité & réseaux"
+        name: "site_settings"
+        description: "⚠️ Ne pas modifier les sections Navigation, Genres ou Titres de page depuis ce fichier sans coordination technique : elles sont couplées au code du site (routeur, CSS) et un changement non coordonné peut casser des pages."
+        fields:
+          - label: "Identité"
+            name: "identite"
+            widget: "object"
+            fields:
+              - { label: "Nom du site", name: "nom", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Description (utilisée pour le SEO par défaut)", name: "description", widget: "text" }
+              - { label: "URL du site", name: "url", widget: "string", hint: "Ex: https://risemusicmag.fr — utilisée pour générer les URLs canoniques." }
+              - { label: "Langue", name: "langue", widget: "hidden", default: "fr" }
+              - { label: "Auteur par défaut", name: "auteurDefault", widget: "string" }
+              - { label: "Email de contact", name: "email", widget: "string", required: false }
+              - { label: "Image de partage social par défaut", name: "ogImage", widget: "image", required: false }
+
+          - label: "Couleurs"
+            name: "couleurs"
+            widget: "object"
+            collapsed: true
+            hint: "⚠️ Modifier ces couleurs change immédiatement l'apparence de tout le site. À utiliser avec précaution, idéalement après une prévisualisation."
+            fields:
+              - { label: "Fond principal", name: "bg", widget: "string", pattern: ["^#[0-9A-Fa-f]{6}$", "Format hexadécimal attendu, ex. #0A0A0F"] }
+              - { label: "Fond secondaire", name: "bg2", widget: "string", pattern: ["^#[0-9A-Fa-f]{6}$", "Format hexadécimal attendu, ex. #101018"] }
+              - { label: "Fond des cartes", name: "card", widget: "string", pattern: ["^#[0-9A-Fa-f]{6}$", "Format hexadécimal attendu, ex. #14141E"] }
+              - { label: "Doré principal", name: "gold", widget: "string", pattern: ["^#[0-9A-Fa-f]{6}$", "Format hexadécimal attendu, ex. #C8A44E"] }
+              - { label: "Doré clair", name: "gold2", widget: "string", pattern: ["^#[0-9A-Fa-f]{6}$", "Format hexadécimal attendu, ex. #E8C46A"] }
+              - { label: "Papier kraft", name: "paper", widget: "string", pattern: ["^#[0-9A-Fa-f]{6}$", "Format hexadécimal attendu, ex. #E8E2D4"] }
+              - { label: "Papier kraft (variante)", name: "paper2", widget: "string", pattern: ["^#[0-9A-Fa-f]{6}$", "Format hexadécimal attendu, ex. #DDD5C2"] }
+              - { label: "Encre (texte sur papier)", name: "ink", widget: "string", pattern: ["^#[0-9A-Fa-f]{6}$", "Format hexadécimal attendu, ex. #0A0A0F"] }
+              - { label: "Texte principal", name: "txt", widget: "string", pattern: ["^#[0-9A-Fa-f]{6}$", "Format hexadécimal attendu, ex. #F0EDE6"] }
+
+          - label: "Réseaux sociaux"
+            name: "reseaux"
+            widget: "object"
+            fields:
+              - { label: "Instagram", name: "instagram", widget: "string", required: false }
+              - { label: "Facebook", name: "facebook", widget: "string", required: false }
+              - { label: "TikTok", name: "tiktok", widget: "string", required: false }
+              - { label: "YouTube", name: "youtube", widget: "string", required: false }

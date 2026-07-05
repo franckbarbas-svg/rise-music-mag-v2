@@ -1,0 +1,119 @@
+{
+  "categories": [
+    {
+      "id": "actu-artiste",
+      "label": "Actu artiste"
+    },
+    {
+      "id": "sortie",
+      "label": "Sortie / Album"
+    },
+    {
+      "id": "live-report",
+      "label": "Live report"
+    },
+    {
+      "id": "decouverte",
+      "label": "Découverte"
+    },
+    {
+      "id": "chronique",
+      "label": "Chronique"
+    },
+    {
+      "id": "interview-flash",
+      "label": "Interview flash"
+    },
+    {
+      "id": "playlist",
+      "label": "Playlist"
+    }
+  ],
+  "articles": [
+    {
+      "id": "frieda-nouveau-titre-embruns",
+      "titre": "FRIEDA dévoile \"Embruns\", un nouveau titre entre pop et mélancolie côtière",
+      "statut": "publie",
+      "datePublication": "2026-06-15",
+      "dateModification": null,
+      "categorie": "sortie",
+      "tags": [
+        "pop",
+        "hybrid",
+        "sortie"
+      ],
+      "auteur": "Rise Music Mag",
+      "tempsLecture": 3,
+      "image": null,
+      "imageAlt": "",
+      "chapo": "Après une interview remarquée sur Rise Music Mag, FRIEDA revient avec un titre inédit qui confirme sa signature sonore entre pop intimiste et paysages marins.",
+      "contenu": "<p>FRIEDA ne s'arrête plus. Quelques mois après nous avoir confié les coulisses de son univers en interview, l'artiste dévoile aujourd'hui \"Embruns\", un titre qui prolonge et affine sa proposition artistique.</p><h3>Une production qui respire l'air du large</h3><p>Dès les premières notes, \"Embruns\" installe une atmosphère saline, portée par des textures synthétiques légères et une voix qui semble flotter au-dessus du mix. FRIEDA confirme ici sa capacité à transformer des sensations très concrètes — le vent, le sel, l'horizon — en émotion pop accessible.</p><h3>Une écriture toujours plus affirmée</h3><p>Sur le plan lyrique, l'artiste poursuit son exploration de la solitude choisie et de l'apaisement, des thèmes déjà présents dans son interview pour Rise Music Mag. \"Embruns\" s'écoute comme une respiration, un instant suspendu entre deux vagues.</p><p>Le titre est disponible dès maintenant sur toutes les plateformes de streaming. On suit ça de très près.</p>",
+      "artistesIds": [
+        "frieda"
+      ],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "titre_en": "FRIEDA Unveils “Embruns,” a New Track Between Pop and Coastal Melancholy",
+      "chapo_en": "Following a standout interview on Rise Music Mag, FRIEDA returns with a new track that confirms her signature sound between intimate pop and seaside imagery.",
+      "contenu_en": "<p>FRIEDA isn't slowing down. A few months after sharing the backstage of her world in an interview, the artist unveils today “Embruns,” a track that extends and refines her artistic proposition.</p><h3>A production that breathes sea air</h3><p>From the first notes, “Embruns” sets a salty atmosphere, carried by light synthetic textures and a voice that seems to float above the mix. FRIEDA confirms here her ability to turn very concrete sensations — wind, salt, the horizon — into accessible pop emotion.</p><h3>An increasingly assertive songwriting</h3><p>Lyrically, the artist continues exploring chosen solitude and calm, themes already present in her Rise Music Mag interview. “Embruns” plays like a breath, a suspended moment between two waves.</p><p>The track is available now on all streaming platforms. We're watching this closely.</p>"
+    },
+    {
+      "id": "theodora-decouverte-afrobeat",
+      "titre": "Theodora, la voix afrobeat qui monte à Saint-Denis",
+      "statut": "publie",
+      "datePublication": "2026-06-22",
+      "dateModification": null,
+      "categorie": "decouverte",
+      "tags": [
+        "afro",
+        "decouverte"
+      ],
+      "auteur": "Rise Music Mag",
+      "tempsLecture": 3,
+      "image": null,
+      "imageAlt": "",
+      "chapo": "Repérée par la rédaction, Theodora impose une afrobeat solaire portée par une écriture directe et une présence scénique déjà affirmée.",
+      "contenu": "<p>Il y a des artistes qui n'ont pas besoin de dix ans de carrière pour imposer une identité claire. Theodora, révélée par Rise Music Mag dans sa fiche artiste, fait partie de celles-ci.</p><h3>Une afrobeat ancrée dans le réel</h3><p>Entre amapiano et pop globale, sa musique puise dans les sonorités qui traversent aujourd'hui les frontières, sans jamais perdre l'ancrage local qui fait sa force : celui de Saint-Denis, où elle a grandi et continue de puiser son inspiration.</p><h3>Une rédaction qui suit de près</h3><p>Rise Music Mag suivra la suite de son parcours avec attention, en particulier ses prochaines sorties et ses premières dates en configuration live.</p>",
+      "artistesIds": [
+        "theodora"
+      ],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "titre_en": "Theodora, the Rising Afrobeat Voice from Saint-Denis",
+      "chapo_en": "Spotted by our editorial team, Theodora brings a sun-drenched afrobeat carried by direct songwriting and an already assured stage presence.",
+      "contenu_en": "<p>Some artists don't need ten years of career to establish a clear identity. Theodora, featured by Rise Music Mag in her artist profile, is one of them.</p><h3>An afrobeat rooted in the real world</h3><p>Between amapiano and global pop, her music draws on sounds that cross borders today, without ever losing the local anchor that gives it strength: Saint-Denis, where she grew up and continues to draw her inspiration.</p><h3>An editorial team watching closely</h3><p>Rise Music Mag will follow the rest of her journey closely, in particular her upcoming releases and her first live dates.</p>"
+    },
+    {
+      "id": "tdj-live-report-montreal",
+      "titre": "Live report : TDJ enflamme la scène montréalaise",
+      "statut": "publie",
+      "datePublication": "2026-06-29",
+      "dateModification": null,
+      "categorie": "live-report",
+      "tags": [
+        "dance",
+        "live-report"
+      ],
+      "auteur": "Rise Music Mag",
+      "tempsLecture": 4,
+      "image": null,
+      "imageAlt": "",
+      "chapo": "De passage à Montréal, TDJ a livré un set électro-dance sans temps mort, confirmant sa place parmi les valeurs sûres de la scène suivie par Rise Music Mag.",
+      "contenu": "<p>Il y a des sets qui se racontent en une phrase : celui de TDJ à Montréal ne redescend jamais. Entre eurodance assumée et house plus contemporaine, l'artiste a tenu la salle en haleine du premier au dernier morceau.</p><h3>Une montée en puissance progressive</h3><p>La set-list, pensée comme une progression continue, a permis à TDJ de dérouler son univers sans rupture de rythme, jusqu'à un dernier tiers résolument tourné vers la piste de danse.</p><h3>Une scène québécoise à suivre</h3><p>Ce passage à Montréal confirme aussi la vitalité de la scène électro locale, que Rise Music Mag continuera de couvrir dans les mois à venir.</p>",
+      "artistesIds": [
+        "tdj"
+      ],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "titre_en": "Live Report: TDJ Sets Montreal Ablaze",
+      "chapo_en": "Passing through Montreal, TDJ delivered a non-stop electro-dance set, confirming her place among the sure bets on the scene followed by Rise Music Mag.",
+      "contenu_en": "<p>Some sets can be summed up in one sentence: TDJ's set in Montreal never lets up. Between full-on eurodance and more contemporary house, the artist kept the crowd hooked from the first track to the last.</p><h3>A steady build in intensity</h3><p>The setlist, designed as a continuous progression, let TDJ unfold her world without breaking the rhythm, up to a final stretch resolutely aimed at the dancefloor.</p><h3>A Québec scene worth following</h3><p>This stop in Montreal also confirms the vitality of the local electronic scene, which Rise Music Mag will continue to cover in the months ahead.</p>"
+    }
+  ]
+}

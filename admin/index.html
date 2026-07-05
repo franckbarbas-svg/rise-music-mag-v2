@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex" />
+  <title>Administration — Rise Music Mag</title>
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <!-- Authentification : Netlify Identity. -->
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <!--
+    IMPORTANT : le script decap-cms.js doit rester en fin de <body>, pas
+    dans <head>. Le placer dans <head> provoque une erreur "Cannot read
+    properties of null (reading 'appendChild')" car Decap tente de
+    construire son interface avant que <body> existe dans le DOM.
+  -->
+  <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+</body>
+</html>

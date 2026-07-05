@@ -1,0 +1,52 @@
+/**
+ * Rise Music Mag — Typographie
+ * ----------------------------------------------------------------
+ * La typo condensée bold est la signature visuelle du site (logo,
+ * titres de section, noms d'artistes en grand format). On centralise
+ * la pile de polices ici pour ne jamais la retaper ailleurs, et on
+ * définit des classes utilitaires pour les 3 tailles de titre récurrentes.
+ */
+
+:root {
+  --font-display: "Roboto Condensed", "Arial Narrow", "Helvetica Neue Condensed", "DejaVu Sans Condensed", Arial, sans-serif;
+  --font-editorial: Georgia, "Times New Roman", serif; /* chapôs, citations, ton "presse" */
+}
+
+/* Titre géant condensé, écrasé horizontalement (transform: scaleX),
+   utilisé pour les noms d'artistes en hero d'interview/article et les
+   titres de page (ARTISTES, INTERVIEWS, À PROPOS...). */
+.display-xl {
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: .85;
+  letter-spacing: .01em;
+  transform: scaleX(.85);
+  transform-origin: left;
+  display: inline-block;
+}
+
+/* Titre de section standard (.head h2, .feature-text h3...) */
+.display-lg {
+  font-family: var(--font-display);
+  font-weight: 900;
+  line-height: .95;
+  letter-spacing: .01em;
+  transform: scaleX(.85);
+  transform-origin: center;
+  display: inline-block;
+}
+
+/* Sous-titre condensé (cartes, labels de bloc) */
+.display-sm {
+  font-family: var(--font-display);
+  font-weight: 900;
+  letter-spacing: .02em;
+}
+
+/* Texte éditorial en italique (chapôs, bios, citations) */
+.editorial-text {
+  font-family: var(--font-editorial);
+  font-style: italic;
+  line-height: 1.5;
+  color: var(--txt2);
+}

@@ -1,0 +1,241 @@
+/**
+ * Rise Music Mag — Boutons, badges, tags, filtres
+ * ----------------------------------------------------------------
+ * Composants atomiques réutilisés sur toutes les pages. Système à 2
+ * variantes de bouton (gold = action primaire, line = secondaire) +
+ * les tags de genre qui partagent la palette définie dans tokens.css.
+ */
+
+.btn {
+  padding: 13px 24px;
+  font-weight: 700;
+  font-size: .78rem;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all .25s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.btn:active {
+  transform: scale(.97);
+}
+
+.btn.gold {
+  background: linear-gradient(135deg, var(--gold), var(--gold2));
+  color: #000;
+  box-shadow: 0 4px 24px rgba(200, 164, 78, .2);
+  position: relative;
+  overflow: hidden;
+}
+.btn.gold::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, .4) 50%, transparent 70%);
+  transform: translateX(-120%);
+  transition: transform .6s ease;
+}
+.btn.gold:hover {
+  background: linear-gradient(135deg, var(--gold2), var(--gold));
+  transform: translateY(-2px);
+  box-shadow: 0 10px 36px rgba(200, 164, 78, .4);
+}
+.btn.gold:hover::before {
+  transform: translateX(120%);
+}
+
+.btn.line {
+  background: none;
+  border-color: rgba(255, 255, 255, .15);
+  color: var(--txt);
+}
+.btn.line:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.btns {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* CTA spécifique de la nav (légèrement différent d'un .btn standard
+   car contraint dans la hauteur de la barre de navigation) */
+.cta {
+  padding: 8px 16px !important;
+  background: var(--gold) !important;
+  color: #000 !important;
+  font-weight: 700 !important;
+  letter-spacing: .04em !important;
+  transition: all .2s !important;
+}
+.cta:hover {
+  background: var(--gold2) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 4px 20px rgba(200, 164, 78, .35) !important;
+}
+
+/* ---------------------------------------------------------------
+   Badge éditorial (kicker au-dessus d'un titre de section)
+   --------------------------------------------------------------- */
+
+.badge {
+  display: inline-block;
+  padding: 5px 12px;
+  background: rgba(200, 164, 78, .1);
+  border-left: 2px solid var(--gold);
+  color: var(--gold);
+  font-size: .62rem;
+  font-weight: 700;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.kick {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 14px;
+  border-left: 2px solid var(--gold);
+  background: rgba(200, 164, 78, .08);
+  color: var(--gold);
+  font-size: .64rem;
+  font-weight: 700;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.kick-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+  animation: pulse 2s ease infinite;
+}
+
+/* ---------------------------------------------------------------
+   Tags (genre, ville, statut)
+   --------------------------------------------------------------- */
+
+.tag {
+  display: inline-block;
+  padding: 3px 8px;
+  font-size: .56rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-right: 5px;
+  margin-bottom: 6px;
+  letter-spacing: .06em;
+}
+.tag.pop    { background: rgba(232, 93, 155, .1);  color: var(--pink);   border: 1px solid rgba(232, 93, 155, .2); }
+.tag.afro   { background: rgba(62, 207, 160, .1);  color: var(--green);  border: 1px solid rgba(62, 207, 160, .2); }
+.tag.dance  { background: rgba(79, 216, 224, .1);  color: var(--cyan);   border: 1px solid rgba(79, 216, 224, .2); }
+.tag.indie  { background: rgba(91, 164, 230, .08); color: var(--blue);   border: 1px solid rgba(91, 164, 230, .15); }
+.tag.hybrid { background: rgba(139, 108, 193, .1); color: var(--purple); border: 1px solid rgba(139, 108, 193, .2); }
+.tag.city   { background: rgba(255, 255, 255, .05); color: var(--txt2);  border: 1px solid rgba(255, 255, 255, .1); }
+.tag.soon   { background: rgba(255, 255, 255, .04); color: var(--muted); border: 1px solid rgba(255, 255, 255, .08); }
+
+/* ---------------------------------------------------------------
+   Filtres (genre, catégorie d'article...) + barre de recherche
+   --------------------------------------------------------------- */
+
+.filters {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.filters button {
+  padding: 7px 14px;
+  border: 1px solid var(--line);
+  background: none;
+  color: var(--txt2);
+  font-size: .68rem;
+  font-weight: 700;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .2s;
+  white-space: nowrap;
+}
+.filters button.active,
+.filters button:hover {
+  background: var(--gold);
+  color: #000;
+  border-color: var(--gold);
+}
+
+.search-box {
+  max-width: 400px;
+  margin: 18px auto 0;
+  position: relative;
+}
+.search-box input {
+  width: 100%;
+  padding: 11px 16px 11px 40px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, .03);
+  color: var(--txt);
+  font-family: inherit;
+  font-size: .85rem;
+  transition: border-color .2s, background .2s;
+}
+.search-box input:focus {
+  outline: none;
+  border-color: var(--gold);
+  background: rgba(200, 164, 78, .04);
+}
+.search-box::before {
+  content: "🔍";
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: .8rem;
+  opacity: .5;
+}
+
+/* ---------------------------------------------------------------
+   Boutons icône circulaires (partage, navigation interview...)
+   --------------------------------------------------------------- */
+
+.icon-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: none;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: var(--txt2);
+  transition: all .2s;
+}
+.icon-btn svg {
+  width: 15px;
+  height: 15px;
+  stroke: currentColor;
+  fill: none;
+}
+.icon-btn:hover {
+  border-color: var(--gold);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+.icon-btn.sm {
+  width: 28px;
+  height: 28px;
+}
+.icon-btn.sm svg {
+  width: 12px;
+  height: 12px;
+}

@@ -1,0 +1,163 @@
+{
+  "interviews": [
+    {
+      "id": "frieda",
+      "artisteId": "frieda",
+      "nom": "FRIEDA",
+      "genre": "hybrid",
+      "statut": "publie",
+      "datePublication": "2025-01-19",
+      "meta": "Hybrid & Future Pop · Montreuil · EP « Derrière le soleil »",
+      "ville": "Montreuil",
+      "youtube": "AAnyxoan9XI",
+      "photo": null,
+      "photoAlt": "Portrait de Frieda lors de l'interview",
+      "bio": "Formée au piano dès l'enfance, Frieda fusionne gospel, hip hop et chanson à texte dans une pop théâtrale et habitée. Voix puissante, mise en scène scintillante, pas de demi-mesure.",
+      "auteur": "Rise Music Mag",
+      "tempsLecture": 4,
+      "qna": [
+        {
+          "q": "D'où vient le nom Frieda ?",
+          "r": "Moins un hommage à Frida Kahlo qu'une façon de féminiser Friedrich, qui signifie « puissant et paix ». Elle aime cette rencontre entre une force affichée et une vulnérabilité qu'on devine derrière.",
+          "q_en": "Where does the name Frieda come from?",
+          "r_en": "Less a tribute to Frida Kahlo than a way of feminizing Friedrich, which means “powerful and peace.” She likes this meeting point between a display of strength and a vulnerability you can sense underneath."
+        },
+        {
+          "q": "Ta musique en une phrase ?",
+          "r": "Une pop qui ose le grandiloquent pour mieux parler d'acceptation de soi.",
+          "q_en": "Your music in one sentence?",
+          "r_en": "A pop that dares to be grandiloquent, all the better to talk about self-acceptance."
+        },
+        {
+          "q": "Pourquoi l'autoproduction pour ton EP ?",
+          "r": "Pour garder une parole entièrement libre et ne rien composer qui ne lui ressemble pas, même si la charge de travail est immense sans l'appui d'un label.",
+          "q_en": "Why self-produce your EP?",
+          "r_en": "To keep her voice entirely free and never write anything that doesn't feel like her, even though the workload is immense without a label's support."
+        },
+        {
+          "q": "Le thème central de « Derrière le soleil » ?",
+          "r": "Le décalage entre l'image solaire qu'on lui prête et une part plus intime qu'elle dévoile enfin dans ses morceaux, entre injonctions sociales et quête d'amour-propre.",
+          "q_en": "The central theme of « Derrière le soleil »?",
+          "r_en": "The gap between the sunny image people project onto her and a more intimate side she finally reveals in her songs, between social pressure and the quest for self-worth."
+        },
+        {
+          "q": "La suite ?",
+          "r": "Continuer à défendre « Derrière le soleil » sur scène et explorer de nouvelles collaborations.",
+          "q_en": "What's next?",
+          "r_en": "Keep bringing « Derrière le soleil » to the stage and explore new collaborations."
+        }
+      ],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "bio_en": "Trained in piano from childhood, Frieda fuses gospel, hip hop and French singer-songwriter tradition into a theatrical, inhabited pop. Powerful voice, shimmering staging, no half-measures."
+    },
+    {
+      "id": "marguerite",
+      "artisteId": null,
+      "nom": "MARGUERITE",
+      "genre": "pop",
+      "statut": "publie",
+      "datePublication": null,
+      "meta": "Pop & Nouvelle Variété · Paris · single « La Boss »",
+      "ville": "Paris",
+      "youtube": "n0MpIfbQnTk",
+      "photo": null,
+      "photoAlt": "Portrait de Marguerite lors de l'interview",
+      "bio": "Révélée lors de la 12ᵉ saison de la Star Academy, Marguerite impose une pop frontale et sincère, où l'autodérision n'empêche jamais la profondeur. Voix chaude, charisme naturel, et une volonté affichée de s'affranchir des carcans esthétiques de la télévision.",
+      "auteur": "Rise Music Mag",
+      "tempsLecture": 4,
+      "qna": [
+        {
+          "q": "« Les filles, les meufs » parle ouvertement de ta bisexualité. Pourquoi ce titre en premier single ?",
+          "r": "L'envie de bousculer les mentalités et de dénoncer la masculinité toxique sans détour, sur une électro-pop entêtante qui a fini certifiée single d'or.",
+          "q_en": "« Les filles, les meufs » openly addresses your bisexuality. Why release it as your first single?",
+          "r_en": "The urge to shake up mindsets and call out toxic masculinity head-on, over an infectious electro-pop track that ended up certified gold."
+        },
+        {
+          "q": "Tu as reçu des critiques sur ton physique après la Star Academy. Comment tu l'as vécu ?",
+          "r": "Elle a choisi de s'afficher au naturel, sourcils non épilés compris, et explique que ça l'a profondément libérée de s'émanciper des codes lissés de la télévision.",
+          "q_en": "You faced criticism about your looks after Star Academy. How did you experience that?",
+          "r_en": "She chose to show herself as she naturally is, unplucked eyebrows included, and explains that freeing herself from television's polished codes was deeply liberating."
+        },
+        {
+          "q": "D'où vient l'EP « Grandir » ?",
+          "r": "D'un endroit qui avait ses qualités et ses défauts, dont celui de faire taire les identités — une matière intime qu'elle a voulu mettre en mots sans filtre.",
+          "q_en": "Where did the EP « Grandir » come from?",
+          "r_en": "From a place that had its strengths and flaws, including a tendency to silence identities — intimate material she wanted to put into words without filter."
+        },
+        {
+          "q": "Et « La Boss », le nouveau single ?",
+          "r": "Un titre né dans la joie, inspiré par son surnom dans son équipe, écrit sur un coup de tête plutôt que pioché dans ses textes plus anciens.",
+          "q_en": "And « La Boss », the new single?",
+          "r_en": "A track born out of joy, inspired by her nickname within her team, written on a whim rather than pulled from older lyrics."
+        },
+        {
+          "q": "La suite ?",
+          "r": "Un premier album en préparation et une scène à l'Olympia à défendre, après avoir déjà écoulé son EP à plus de 25 000 exemplaires.",
+          "q_en": "What's next?",
+          "r_en": "A first album in the works and a show at the Olympia to look forward to, after already selling more than 25,000 copies of her EP."
+        }
+      ],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "bio_en": "Discovered during season 12 of Star Academy, Marguerite delivers a direct, sincere pop, where self-deprecation never gets in the way of depth. A warm voice, natural charisma, and an openly stated will to break free from television's aesthetic straitjackets."
+    },
+    {
+      "id": "st-graal",
+      "artisteId": null,
+      "nom": "ST GRAAL",
+      "genre": "hybrid",
+      "statut": "publie",
+      "datePublication": null,
+      "meta": "Hybrid & Future Pop · Angoulême · EP « Les Extraordinaires Histoires d'amour de St Graal »",
+      "ville": "Angoulême",
+      "youtube": "XcbTF4Z3H_Q",
+      "photo": null,
+      "photoAlt": "Portrait de St Graal lors de l'interview",
+      "bio": "Révélé sur TikTok pendant le confinement avec le titre viral « Les dauphins », St Graal (Léo Meynard) façonne une post-pop vibrante entre électro-rock incisif et textes à fleur de peau, entre Alt-J, The Strokes et la chanson française.",
+      "auteur": "Rise Music Mag",
+      "tempsLecture": 4,
+      "qna": [
+        {
+          "q": "D'où vient le nom St Graal ?",
+          "r": "Peu de rapport avec la légende biblique, beaucoup plus avec les Monty Python — une quête absurde et drôle qui lui donne envie de cacher des indices à travers ses albums, comme un concept à suivre dans le temps.",
+          "q_en": "Where does the name St Graal come from?",
+          "r_en": "Little to do with the biblical legend, much more with Monty Python — an absurd, funny quest that makes him want to hide clues throughout his albums, like a concept to follow over time."
+        },
+        {
+          "q": "Comment as-tu construit ton public ?",
+          "r": "Pendant le confinement, il s'est lancé le défi de composer quatre morceaux par semaine et de les filmer pour les réseaux, jusqu'à trouver son public sur TikTok et Instagram.",
+          "q_en": "How did you build your audience?",
+          "r_en": "During lockdown, he set himself the challenge of writing four tracks a week and filming them for social media, until he found his audience on TikTok and Instagram."
+        },
+        {
+          "q": "Tes influences sont assez éclectiques...",
+          "r": "De l'électro rock incisif façon The Strokes ou Green Day, mais aussi des auteurs plus sombres comme Hubert-Félix Thiéfaine ou des groupes comme Silmarils, qu'il admire pour leur écriture.",
+          "q_en": "Your influences are pretty eclectic...",
+          "r_en": "From incisive electro rock in the vein of The Strokes or Green Day, but also darker songwriters like Hubert-Félix Thiéfaine or bands like Silmarils, whom he admires for their writing."
+        },
+        {
+          "q": "« Je t'emmènerai », ton titre le plus connu ?",
+          "r": "Une déclaration d'amour assumée et grandiloquente, pensée comme une comédie romantique en chanson, jouée en avant-première sur scène avant même sa sortie officielle.",
+          "q_en": "« Je t'emmènerai », your best-known track?",
+          "r_en": "An unabashed, grandiloquent declaration of love, conceived like a romantic comedy set to music, performed live as a preview even before its official release."
+        },
+        {
+          "q": "La suite ?",
+          "r": "Poursuivre les concerts à travers la France (Lille, Montréal) et creuser le concept d'une quête à indices disséminée dans ses prochains albums.",
+          "q_en": "What's next?",
+          "r_en": "Keep touring across France (Lille, Montreal) and dig deeper into the concept of a clue-driven quest scattered throughout his upcoming albums."
+        }
+      ],
+      "seo": {
+        "titre": null,
+        "description": null
+      },
+      "bio_en": "Discovered on TikTok during lockdown with the viral track « Les dauphins », St Graal (Léo Meynard) crafts a vibrant post-pop between incisive electro-rock and raw, exposed-nerve lyrics, somewhere between Alt-J, The Strokes and French chanson."
+    }
+  ]
+}

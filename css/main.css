@@ -1,0 +1,24 @@
+/**
+ * Rise Music Mag — Point d'entrée CSS
+ * ----------------------------------------------------------------
+ * Importe tous les modules dans l'ordre où la cascade doit s'appliquer :
+ * tokens d'abord (variables), puis typographie et animations (utilisées
+ * partout), puis layout général, puis composants du plus générique
+ * (boutons) au plus spécifique (article). Footer et utilitaires en dernier.
+ *
+ * Pour ajouter un nouveau composant : créer son fichier dans /css,
+ * l'importer ici à l'endroit logique, ne jamais dupliquer une règle
+ * déjà définie dans tokens.css ou typography.css.
+ */
+
+@import url('tokens.css');
+@import url('typography.css');
+@import url('animations.css');
+@import url('layout.css');
+@import url('navigation.css');
+@import url('buttons.css');
+@import url('cards.css');
+@import url('article.css');
+@import url('forms.css');
+@import url('footer.css');
+@import url('utilities.css');

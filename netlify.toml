@@ -1,0 +1,153 @@
+# Rise Music Mag — Configuration Netlify
+# ----------------------------------------------------------------
+# Hébergement statique + redirections SPA. Remplace le système BASE_PATH
+# manuel nécessaire sur GitHub Pages : ici le site vit toujours à la racine.
+
+[build]
+  publish = "."
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# ----------------------------------------------------------------
+# En-têtes de sécurité et de cache de base
+# ----------------------------------------------------------------
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+
+[[headers]]
+  for = "/data/*.json"
+  [headers.values]
+    Cache-Control = "public, max-age=300"
+
+[[headers]]
+  for = "/assets/fonts/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"
+
+[[headers]]
+  for = "/sw.js"
+  [headers.values]
+    Cache-Control = "no-cache"
+
+[[headers]]
+  for = "/sitemap.xml"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    Content-Type = "application/xml; charset=UTF-8"
+
+[[headers]]
+  for = "/robots.txt"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+
+# ----------------------------------------------------------------
+# Redirections SPA — chaque route "propre" sert toujours index.html,
+# le routeur JS (js/router.js, étape suivante) se charge du rendu.
+# Déclarées explicitement (plutôt qu'un seul catch-all) pour rester
+# lisible et pour permettre des redirections 404 propres plus tard.
+# ----------------------------------------------------------------
+[[redirects]]
+  from = "/artiste/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/artistes"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/interview/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/interviews"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/article/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/actualites"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/album/*"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/albums"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/concerts"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/galerie"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/about"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/partenariats"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/contact"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/mentions-legales"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/confidentialite"
+  to = "/index.html"
+  status = 200
+
+# ----------------------------------------------------------------
+# Version anglaise (/en/...) — un seul catch-all suffit puisque toutes
+# les sous-routes anglaises (/en/artists, /en/artist/*, /en/news...)
+# doivent de toute façon retomber sur index.html pour que le routeur JS
+# (js/router.js) prenne le relais et localise le rendu.
+# ----------------------------------------------------------------
+[[redirects]]
+  from = "/en"
+  to = "/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/en/*"
+  to = "/index.html"
+  status = 200
