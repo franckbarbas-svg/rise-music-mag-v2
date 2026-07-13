@@ -6,6 +6,38 @@
  * simple sur fond sombre.
  */
 
+/* ============================================================
+   MASQUAGE ULTRA-AGRESSIF DU FORMULAIRE NETLIFY STATIQUE
+   Le formulaire hidden dans index.html DOIT rester invisible
+   même face aux overrides du navigateur ou d'extensions.
+   ============================================================ */
+
+form[name="contact"][data-netlify="true"],
+form[name="contact"][hidden],
+form[hidden][data-netlify="true"] {
+  display: none !important;
+  position: absolute !important;
+  left: -99999px !important;
+  top: -99999px !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  height: 0 !important;
+  width: 0 !important;
+  max-height: 0 !important;
+  max-width: 0 !important;
+  overflow: hidden !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  clip: rect(0, 0, 0, 0) !important;
+  clip-path: inset(50%) !important;
+}
+
+/* ============================================================
+   STYLES COMMUNS (À PROPOS, PARTENARIATS, MENTIONS LÉGALES)
+   ============================================================ */
+
 .about {
   display: grid;
   grid-template-columns: 1.3fr .7fr;
@@ -51,11 +83,13 @@
   flex-wrap: wrap;
 }
 
-/* ---------------------------------------------------------------
-   Formulaire (page Contact)
-   --------------------------------------------------------------- */
+/* ============================================================
+   FORMULAIRE DE CONTACT (Page /contact, généré par JS)
+   ============================================================ */
 
-form {
+/* Ciblage spécifique du formulaire DYNAMIQUE (pas le Netlify caché) */
+#contact-form,
+form:not([data-netlify="true"]):not([hidden]) {
   max-width: 620px;
   margin: 0 auto;
   background: var(--card);
@@ -65,6 +99,7 @@ form {
   display: grid;
   gap: 12px;
 }
+
 .form-note {
   text-align: center;
   color: var(--muted);
@@ -86,7 +121,14 @@ label {
   text-transform: uppercase;
   letter-spacing: .05em;
 }
-input, select, textarea {
+
+/* Champs de formulaire (input, select, textarea) */
+#contact-form input,
+#contact-form select,
+#contact-form textarea,
+form:not([data-netlify="true"]):not([hidden]) input,
+form:not([data-netlify="true"]):not([hidden]) select,
+form:not([data-netlify="true"]):not([hidden]) textarea {
   width: 100%;
   padding: 11px 14px;
   border-radius: 10px;
@@ -97,21 +139,43 @@ input, select, textarea {
   font-size: .88rem;
   transition: border-color .2s, background .2s;
 }
-input:focus, select:focus, textarea:focus {
+
+#contact-form input:focus,
+#contact-form select:focus,
+#contact-form textarea:focus,
+form:not([data-netlify="true"]):not([hidden]) input:focus,
+form:not([data-netlify="true"]):not([hidden]) select:focus,
+form:not([data-netlify="true"]):not([hidden]) textarea:focus {
   outline: none;
   border-color: var(--gold);
   background: rgba(200, 164, 78, .04);
 }
-select option { background: var(--card); }
-textarea { min-height: 90px; resize: vertical; }
 
+#contact-form select option,
+form:not([data-netlify="true"]):not([hidden]) select option {
+  background: var(--card);
+}
+
+#contact-form textarea,
+form:not([data-netlify="true"]):not([hidden]) textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+/* État de succès du formulaire */
 .form-success {
   text-align: center;
   padding: 30px;
   animation: fadeUp .4s ease;
 }
-.form-success .icon { font-size: 2.5rem; margin-bottom: 12px; }
-.form-success h3 { color: var(--gold); margin-bottom: 6px; }
+.form-success .icon {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+.form-success h3 {
+  color: var(--gold);
+  margin-bottom: 6px;
+}
 .form-success p {
   color: var(--txt2);
   font-size: .88rem;
@@ -119,9 +183,9 @@ textarea { min-height: 90px; resize: vertical; }
   word-break: break-word;
 }
 
-/* ---------------------------------------------------------------
-   Mentions légales / Confidentialité
-   --------------------------------------------------------------- */
+/* ============================================================
+   MENTIONS LÉGALES / CONFIDENTIALITÉ
+   ============================================================ */
 
 .legal-grid {
   max-width: 820px;
@@ -148,6 +212,10 @@ textarea { min-height: 90px; resize: vertical; }
   margin-bottom: 6px;
   font-size: .86rem;
 }
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
 
 @media (max-width: 900px) {
   .about { grid-template-columns: 1fr; }
